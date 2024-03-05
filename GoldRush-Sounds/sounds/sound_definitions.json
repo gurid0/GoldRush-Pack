@@ -1,0 +1,353 @@
+{
+    "format_version" : "1.14.0",
+    "sound_definitions" : {
+        "music.boss_souls.ambiance" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_despawn_ambiance",
+               "stream" : true,
+               "volume" : 0.30
+            }
+         ]
+      },
+      "music.peste.run" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/sylvanar_boss_run_music",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.opening.cosmet" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/cosmet_open",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.ice" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/ice",
+            "stream" : true,
+            "volume" : 0.10
+          }
+        ]
+      },
+      "music.peste.scary" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/scary",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.peste.fight" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/boss_fight_sylvanar",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.peste.crystal" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/crystal_maudit",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.la" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/je_suis_la",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.name" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/mon_nom",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.rire1" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/rire_1",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.soin" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/soin",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.soin2" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/soin_2",
+            "stream" : true,
+            "volume" : 1.0
+          }
+        ]
+      },
+      "music.peste.flash" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/attaque_flash_boss",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.peste.teleport" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/teleport",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.peste.jump" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/jump_boss",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.peste.win" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/peste_win",
+            "stream" : true,
+            "volume" : 0.60
+          }
+        ]
+      },
+      "music.boss_souls.ancetre" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/ancetre_voix",
+            "stream" : true,
+            "volume" : 0.50
+          }
+        ]
+      },
+      "music.cinematic.goldrush" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/cinematic",
+            "stream" : true,
+            "volume" : 0.50
+          }
+        ]
+      },
+      "music.boss_souls.tenebre" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/tenebre_voix",
+            "stream" : true,
+            "volume" : 0.50
+          }
+        ]
+      },
+      "music.boss_souls.ton_ame" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/ton_ame_voix",
+            "stream" : true,
+            "volume" : 0.50
+          }
+        ]
+      },
+      "music.boss_souls.vaincu" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/vaincu_voix",
+            "stream" : true,
+            "volume" : 0.50
+          }
+        ]
+      },
+      "music.boss_souls.vaincu_music" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/boss_souls_dead_music",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.boss_souls.fight" : {
+               "__use_legacy_max_distance" : "true",
+               "category" : "music",
+               "sounds" : [
+                  {
+                     "load_on_low_memory" : true,
+                     "name" : "sounds/boss_battle_remix_ost",
+                     "stream" : true,
+                     "volume" : 0.30
+                  }
+               ]
+        },
+      "music.troll.fight" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_music",
+            "stream" : true,
+            "volume" : 0.10
+          }
+        ]
+      },
+      "music.troll.hurle1" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_1",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.troll.hurle2" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_2",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.troll.hurle3" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_3",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.troll.hurle4" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_4",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      },
+      "music.troll.hurle5" : {
+        "__use_legacy_max_distance" : "true",
+        "category" : "music",
+        "sounds" : [
+          {
+            "load_on_low_memory" : true,
+            "name" : "sounds/troll_5",
+            "stream" : true,
+            "volume" : 0.30
+          }
+        ]
+      }
+    }
+}

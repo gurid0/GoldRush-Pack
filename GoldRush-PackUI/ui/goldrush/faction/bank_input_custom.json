@@ -1,0 +1,83 @@
+{
+    "namespace": "gd_bank_input",
+
+    "bank_input@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/faction/bank_input"
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65]
+                }
+            },
+            {
+                "amount@gd_write_mail.target_input": {
+                    "offset": [50.5,9.5],
+                    "$font_size": "small",
+                    "$max_text_edit_length": 30,
+                    "$option_text_edit_control_size": [190,42]
+                }  
+            },
+            {
+                "submit_button@gd_menu_form.button": {
+                    "$pressed_button_name": "button.submit_custom_form",
+                    "$button_asset_panel": "gd_bank_input.submit_button_asset",
+                    "size": [89,19],
+                    "offset": [-0.5,39],
+                    "anchor_from": "center",
+                    "anchor_to": "top_middle",
+                    "layer": 6,
+                    "$default_border_color": [1,1,1],
+                    "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+                    "$condition|default": true,
+                    "bindings": [
+                        {
+                          "binding_name": "#form_button_text",      
+                          "binding_type": "collection",                                      
+                          "binding_collection_name": "form_buttons"
+                        },
+                        {
+                          "binding_type": "view",    
+                          "source_property_name": "$condition",
+                          "target_property_name": "#visible"
+                        }
+                    ]
+                  }
+            }
+        ]
+    },
+
+    "submit_button_asset": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+            {
+                "image": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/faction/bank_input_submit"
+                }
+            },
+            {
+                "border@common_buttons.focus_border": {
+                  "size": ["100%", "100%"],
+                  "color": "$border_color",
+                  "layer": 3,
+                  "alpha": "$border_alpha"
+                }
+              }
+        ]
+    }
+}

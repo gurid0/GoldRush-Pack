@@ -1,0 +1,343 @@
+{
+  "namespace": "keypad",
+
+  "keypad_grid": {
+    "type": "grid",
+    "size": [ 197, 114 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "grid_dimensions": [ 10,  6],
+    "collection_name": "container_items",
+    "$background_images": "keypad.keypad_cell_image",
+    "$offset_grid": [9, -8],
+    "controls": [
+      {
+        "grid1@common.container_item": {
+          "grid_position": [ 2, 0 ],
+          "$item_collection_name": "container_items"
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 2, 2 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 2, 3 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 2, 4 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 2, 5 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "grid1@common.container_item": {
+          "grid_position": [ 3, 0 ],
+          "$item_collection_name": "container_items"
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 2 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 3 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 4 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 5 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "grid4@common.container_item": {
+          "grid_position": [ 4, 0 ],
+          "$item_collection_name": "container_items"
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 4, 2 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 4, 3 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 4, 4 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 4, 5 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": "$offset_grid",
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 5, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "$item_collection_name": "container_items"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "keypad_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 12 ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "controls": [
+      { "chest_label@chest.chest_label": {
+        "text": "",
+        "offset": [ -22, -62 ],
+        "controls": [
+          {
+            "close_button_holder": {
+              "type": "panel",
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "controls": [
+                {
+                  "close@base.close_button": {
+                    "offset": [9, 24],
+                    "layer": 3,
+                    "$hover": "textures/ui/close_X_hover_button"
+                  }
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_name": "$close_button_visible_binding_name",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+      },
+      {
+        "grid@keypad.keypad_grid": {
+          "offset": [ 20, 0 ]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/keypad/bg_keypad",
+          "size": [ 110, 150 ],
+          "offset": [ 0, 0 ],
+          "alpha": 1.0,
+          "controls": [
+            {
+              "desc_bg": {
+                "type": "image",
+                "texture": "textures/ui/bg_desc",
+                "size": ["73% - 2px", 20],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0, 10],
+                "alpha": 0.8,
+                "controls": [
+                  {
+                    "label_desc": {
+                      "type": "label",
+                      "size": ["97%", "100%"],
+                      "offset": [3, 2],
+                      "text": "§fLe coffre est §csécurisé§f ! Entre le mot de passe pour le dévérouiller !",
+                      "font_scale_factor": 0.5
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "type": "image",
+          "texture": "textures/ui/keypad/title_keypad",
+          "size": [ 70, 45 ],
+          "offset": [ 0, -76 ]
+        }
+      }
+    ]
+  },
+
+  "keypad_chest_panel": {
+    "type": "panel",
+    "offset": [0, 40],
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 14
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "keypad_chest_panel_top_half@keypad.keypad_chest_panel_top_half": {
+                    "layer": 6,
+                    "offset": [0, 0]
+                  } },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "keypad_cell_image": {
+    "type": "image",
+    "texture": "textures/ui/keypad/keypad_cell_image",
+    "layer": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:peste",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/peste"
+      },
+ 	"particle_effects": {
+        "sang": "goldrush:sang"
+      },
+      "geometry": {
+        "default": "geometry.peste"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

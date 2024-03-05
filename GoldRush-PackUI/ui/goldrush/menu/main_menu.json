@@ -1,0 +1,157 @@
+{
+    "namespace": "gd_main_menu",
+
+    "main_menu@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "offset": [0,-10],
+        "controls": [
+        {
+          "background_cadre": {
+            "type": "image",
+            "size": ["100%","100%"],
+            "texture": "textures/goldrush/main_cadre",
+            "layer": 6
+          }
+        },
+        {
+          "background_cadre_bg": {
+            "type": "image",
+            "size": ["100%","100%"],
+            "texture": "textures/goldrush/main_cadre_bg"
+          }
+        },
+        {
+          "exit_button@gd.exit_button":{
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "offset": [-1.5,6.5],
+            "size": [26.65,26.65],
+            "layer": 7
+          }
+        },
+        {
+            "main_panel": {
+                "type": "panel",
+                "size": ["100%","100%"],
+                "controls": [
+                  {
+                      "factions@gd_main_menu.stack_panel": {
+                        "size": [130,57],
+                        "offset": [-2,-2.5],
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_left",
+                        "$condition": "(#form_button_text = 'Factions')"
+                      }
+                    },
+                    {
+                      "cosmetics@gd_main_menu.stack_panel": {
+                          "size": [130,73],
+                          "offset": [-2,-2.5],
+                          "anchor_from": "center",
+                          "anchor_to": "top_left",
+                          "$condition": "(#form_button_text = 'Cosmetics')"
+                      }
+                    },   
+                    {
+                      "shop_jobs_cosmetic": {
+                        "type": "panel",
+                        "size": [125.5,130],
+                        "offset": [18,38],
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "controls": [
+                          {
+                            "shop_jobs@gd_main_menu.stack_panel": {
+                              "size": ["100%",79],
+                              "offset": [0,0],
+                              "$size": ["50%","100%"],
+                              "anchor_from": "top_left",
+                              "anchor_to": "top_left",
+                              "orientation": "horizontal",  
+                              "$condition": "(#form_button_text = 'Shop' or #form_button_text = 'Jobs')"
+                            }
+                          },
+                          {
+                            "cosmetics@gd_main_menu.stack_panel": {
+                              "size": ["100%",51],
+                              "offset": [0,14],
+                              "anchor_from": "left_middle",
+                              "anchor_to": "top_left",
+                              "orientation": "vertical",  
+                              "$condition": "(#form_button_text = 'Montures')"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                ]
+            }
+        }
+        ]
+    },
+
+    "stack_panel": {
+      "type": "stack_panel",
+      "orientation": "vertical",
+      "factory":{
+          "name": "buttons",
+          "control_name": "gd_main_menu.menu_button"
+      },
+  
+      "collection_name": "form_buttons",
+      "bindings": [
+          {
+          "binding_name": "#form_button_length",
+          "binding_name_override": "#collection_length"
+          }
+      ]
+    },
+
+    "menu_button@gd_menu_form.button": {
+      "$size|default": ["100%","100%"],
+      "size": "$size",
+      "$condition|default": "true",
+      "$button_asset_panel": "gd_main_menu.button_assets",
+      "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+      "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+      "bindings": [
+        {
+          "binding_type": "collection_details",
+          "binding_collection_name": "form_buttons"
+        },
+        {
+          "binding_name": "#form_button_text",      
+          "binding_type": "collection",                                      
+          "binding_collection_name": "form_buttons"
+        },
+        {
+          "binding_type": "view",    
+          "source_property_name": "$condition",
+          "target_property_name": "#visible"
+        }
+      ]
+    },
+    "button_assets": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "$padding_size|default": [0,0],
+      "controls": [
+          {
+              "background@gd_menu_form.button_image": {
+                  "fill": true
+              }
+          },
+          {
+            "border@common_buttons.focus_border": {
+              "size": ["100%", "100%"],
+              "color": "$border_color",
+              "layer": 3,
+              "alpha": "$border_alpha"
+            }
+          }
+      ]
+  }
+}

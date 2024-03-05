@@ -1,0 +1,11 @@
+{
+  "goldrush:emerald_chest_lock": {
+    "textures": "emerald_chest_lock"
+  },
+  "goldrush:amethyst_chest_lock": {
+    "textures": "amethyst_chest_lock"
+  },
+  "goldrush:platinum_chest_lock": {
+    "textures": "platinum_chest_lock"
+  }
+}

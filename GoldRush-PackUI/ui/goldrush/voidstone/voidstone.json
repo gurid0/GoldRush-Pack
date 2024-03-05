@@ -1,0 +1,239 @@
+{
+  "namespace": "voidstone",
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [420, 200],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/voidstone/bg_voidstone",
+          "controls": [
+            {"title@voidstone.title":  {}},
+            {"close@voidstone.close_button":  {}},
+            {"description@voidstone.desc": {}},
+            {
+              "buttons@voidstone.button_layer": {
+                "controls": [
+                  {"raisin@voidstone.raisin_button":  {}},
+                  {"berry_pink@voidstone.berry_pink":  {}},
+                  {"berry_yellow@voidstone.berry_yellow":  {}},
+
+                  {"berry_black@voidstone.berry_black":  {}},
+                  {"berry_blue@voidstone.berry_blue":  {}},
+                  {"camouflage@voidstone.camouflage":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+  // BUTTONS STYLES
+  "raisin_button@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [3, 3],
+    "$text_offset": [-1, -5],
+    "$button_text": "1x Bouteille métiers\n§7(100.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'bottle')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/items/bottle_jobs",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+
+
+  "berry_pink@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "45%"],
+    "offset": [0, 3],
+    "$text_offset": [-1, -5],
+    "$button_text": "x256 bouteilles vides\n§7(50.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'bottle_empty')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/items/alcool_empty",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+  "berry_yellow@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [-3, 3],
+    "$text_offset": [-1, -5],
+    "$button_text": "x16 blocs de platine\n§7(250.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'platine')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/blocks/platinum_block",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right"
+  },
+
+
+  "berry_black@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [3, -3],
+    "$text_offset": [-1, -5],
+    "$button_text": "x16 blocs d'améthyste\n§7(150.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'amethyst')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/blocks/amethyst_block",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left"
+  },
+
+
+  "berry_blue@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "45%"],
+    "offset": [0, -3],
+    "$text_offset": [-1, -5],
+    "$button_text": "x16 blocs d'émeraude\n§7(75.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'emerald')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/blocks/emerald_block",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle"
+  },
+
+  "camouflage@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [-3, -3],
+    "$text_offset": [-1, -5],
+    "$button_text": "x3 pépites d'or\n§7(1.000.000 pierres)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/voidstone/button",
+    "$hover_button_texture": "textures/goldrush/voidstone/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'nugget')",
+    "$sizeicon": [20, 20],
+    "alpha": 0.8,
+    "$icon": "textures/items/gold_nugget",
+    "$sizeicon_offset": [44, 9],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right"
+  },
+
+
+
+  // ASSETS UI
+
+
+  "button_layer@api.base_image": {
+    "size": ["90%", "60%"],
+    "$texture": "textures/goldrush/voidstone/button_layer",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -10]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/goldrush/voidstone/close_button",
+    "$hover": "textures/goldrush/voidstone/close_button_hover"
+  },
+
+  "title@api.base_image": {
+    "size": [70, 13],
+    "$texture": "textures/goldrush/voidstone/title",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 5]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 30],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 24],
+    "alpha": 0.6,
+    "$texture": "textures/goldrush/voidstone/bg_desc",
+    "controls": [
+      {
+        "label@api.base_label": {
+          "text": "#form_text",
+          "size": ["99%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

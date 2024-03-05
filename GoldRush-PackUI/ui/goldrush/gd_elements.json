@@ -1,0 +1,84 @@
+{
+    "namespace": "gd",
+
+    "gd_image": {
+        "type": "image",
+        "texture": "textures/ui/Black",
+        "size": [50,50]
+    },
+
+    "gd_title_text": {
+        "type": "label",
+        "text": "#title_text"
+    },
+
+    "gd_label": {
+        "type": "label",
+        "text": "Default text by goldrush",
+        "color": [1.0,1.0,1.0]
+    },
+
+   
+
+    "gd_background_image": {
+        "type": "image",
+        "texture": "textures/ui/Black",
+        "size": ["100%", "100%"]
+    },
+
+    "exit_button@common_dialogs.common_close_button_holder": {},
+
+    "skin_view@start.skin_viewer_panel": {
+    },
+
+
+
+
+    ////////// LONG FORM ////////////////
+
+    "gd_form_content": {
+        "type": "label",
+        "offset": [2,2],
+        "color": "$main_header_text_color",
+        "size": ["100%", "default"],
+        "text": "#form_text"
+    },
+
+    "gd_button_text": {
+        "type": "label",
+        "text": "$button_text",
+        "layer": 1,
+        "offset": [0,20],
+        "text_alignment": "center",
+        "bindings": [
+            {
+                "binding_type": "$button_text_binding_type",
+                "binding_condition": "$button_binding_condition",
+                "binding_collection_name": "$button_text_grid_collection_name",
+                "binding_name": "$button_text",
+                "binding_name_override": "$button_text"
+            }
+        ]
+    },
+    "gd_button_image": {
+        "type": "image",
+        "layer": 1,
+        "size": [32, 32],
+        "offset": [-2, 0],
+        "bindings":[
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_name": "#form_button_texture_file_system",
+            "binding_name_override": "#texture_file_system",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+    }
+}
+    

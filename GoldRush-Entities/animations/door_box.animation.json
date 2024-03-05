@@ -1,0 +1,70 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.door_box.open": {
+      "animation_length": 10.25,
+      "bones": {
+        "porte": {
+          "rotation": {
+            "1.4583": [0, 0.64, 0],
+            "5.0": [0, 105, 0]
+          }
+        },
+        "anim_octagon": {
+          "rotation": {
+            "0.0": {
+              "post": [0, 0, 0],
+              "lerp_mode": "catmullrom"
+            },
+            "0.5": {
+              "post": [0, 0, 10],
+              "lerp_mode": "catmullrom"
+            },
+            "1.0": {
+              "post": [0, 0, -152.5],
+              "lerp_mode": "catmullrom"
+            },
+            "1.5": {
+              "post": [0, 0, -140],
+              "lerp_mode": "catmullrom"
+            },
+            "2.0": [0, 0, -155]
+          }
+        },
+        "border": {
+          "rotation": [0, 0, -585]
+        },
+        "grannd_portail": {
+          "rotation": [0, 0, 360]
+        },
+        "petit_portail": {
+          "rotation": [0, 0, 360]
+        },
+        "border20": {
+          "rotation": [0, 0, -720]
+        },
+        "grannd_portail2": {
+          "rotation": [0, 0, 360]
+        },
+        "petit_portail2": {
+          "rotation": [0, 0, 360]
+        },
+        "octagon4": {
+          "rotation": [630, 0, 0]
+        },
+        "octagon5": {
+          "rotation": [-630, 0, 0]
+        },
+        "bone": {
+          "rotation": [0, 0, -720]
+        },
+        "octagon6": {
+          "rotation": [630, 0, 0]
+        },
+        "octagon7": {
+          "rotation": [-630, 0, 0]
+        }
+      }
+    }
+  }
+}

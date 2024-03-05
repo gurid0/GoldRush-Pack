@@ -1,0 +1,17 @@
+{
+  "format_version" : "1.14.0",
+  "sound_definitions" : {
+    "music.door_box.open" : {
+      "__use_legacy_max_distance" : "true",
+      "category" : "music",
+      "sounds" : [
+        {
+          "load_on_low_memory" : true,
+          "name" : "sounds/box_open",
+          "stream" : true,
+          "volume" : 0.30
+        }
+      ]
+    }
+  }
+}

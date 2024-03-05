@@ -1,0 +1,111 @@
+{
+    "namespace": "gd_see_mail",
+
+    "see_mail@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/mails/see_mail"
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                  "anchor_from": "top_right",
+                  "anchor_to": "top_right",
+                  "offset": [-1.5,6.5],
+                  "size": [26.65,26.65]
+                }
+            },
+            {
+                "text_scroll@common.scrolling_panel": {
+                    "size": [234, 69 ],
+                    "$scrolling_content": "gd_see_mail.vanilla_dialog_text",
+                    "$scroll_box_visible_touch": false,
+                    "$always_handle_scrolling": true,
+                    "$show_background": false,
+                    "$scroll_bar_left_padding_size": [0, 0],
+                    "$scroll_bar_right_padding_size": [0, 0],
+                    "$scroll_size": [5, "100%"],
+                    "$scroll_size_touch": "$scroll_size",
+                    "offset": [1,-3.5]
+                  }
+            },
+            {
+                "left_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [-27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.left_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "right_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.right_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "bottom_tab_content": {
+                    "type": "stack_panel",
+                    "offset": [-32,188],
+                    "size": [20.8,"100%"],
+                    "orientation": "horizontal",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.bottom_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "vanilla_dialog_text": {
+        "type": "label",
+        "size": ["100%", "default"],
+        "color": [0,0,0],
+        "text": "#form_text"
+      }
+    
+}

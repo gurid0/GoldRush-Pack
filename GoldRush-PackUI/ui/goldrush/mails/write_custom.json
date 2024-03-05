@@ -1,0 +1,254 @@
+{
+    "namespace": "gd_write_mail", 
+
+    "write_mail@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/mails/write"
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65]
+                }
+            },
+           {
+                "content_input": {
+                    "type": "stack_panel",
+                    "size": [234, 69],
+                    "offset": [29.5,43],
+                    "orientation": "vertical",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                
+                    "factory":{
+                      "name": "buttons",
+                      "control_ids": {
+                        "label": "@server_form.custom_label",
+                        "toggle": "@server_form.custom_toggle",
+                        "slider": "@server_form.custom_slider",
+                        "step_slider": "@server_form.custom_step_slider",
+                        "dropdown": "@server_form.custom_dropdown",
+                        "input": "@gd_write_mail.custom_input"
+                      }
+                    },
+                
+                    "collection_name": "custom_form",
+                    "bindings": [
+                      {
+                        "binding_name": "#custom_form_length",
+                        "binding_name_override": "#collection_length"
+                      }
+                    ]
+                }
+            },
+            {
+                "target_input": {
+                    "type": "stack_panel",
+                    "size": [122, 28],
+                    "offset": [80.5,-2],
+                    "orientation": "vertical",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "top_left",
+                    "factory":{
+                      "name": "buttons",
+                      "control_ids": {
+                        "label": "@server_form.custom_label",
+                        "toggle": "@server_form.custom_toggle",
+                        "slider": "@server_form.custom_slider",
+                        "step_slider": "@server_form.custom_step_slider",
+                        "dropdown": "@server_form.custom_dropdown",
+                        "input": "@gd_write_mail.target"
+                      }
+                    },
+                
+                    "collection_name": "custom_form",
+                    "bindings": [
+                      {
+                        "binding_name": "#custom_form_length",
+                        "binding_name_override": "#collection_length"
+                      }
+                    ]
+                }
+            },
+            {
+                "submit_button@gd_menu_form.button": {
+                    "$pressed_button_name": "button.submit_custom_form",
+                    "$button_asset_panel": "gd_write_mail.submit_button_asset",
+                    "size": [28,28],
+                    "offset": [-57.5,-39.5],
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "layer": 6,
+                    "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+                    "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+                    "$condition|default": true,
+                    "bindings": [
+                        {
+                          "binding_name": "#form_button_text",      
+                          "binding_type": "collection",                                      
+                          "binding_collection_name": "form_buttons"
+                        },
+                        {
+                          "binding_type": "view",    
+                          "source_property_name": "$condition",
+                          "target_property_name": "#visible"
+                        }
+                    ]
+                  }
+            }
+        ]
+    },
+
+
+    "custom_input": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+            {
+                "content@gd_write_mail.custom_multiline_input": {
+                    "visible": "#visible",
+                    "bindings": [
+                        {
+                            "binding_name": "#custom_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "custom_form"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(('%.7s' * #custom_text) = 'content')",
+                            "target_property_name": "#visible"
+                        }   
+                    ]
+                }
+            }
+        ]
+    },
+
+    "target": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+            {
+                "target@gd_write_mail.target_input": {
+                    "visible": "#visible",
+                    "bindings": [
+                        {
+                            "binding_name": "#custom_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "custom_form"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(('%.6s' * #custom_text) = 'target')",
+                            "target_property_name": "#visible"
+                        }   
+                    ]
+                }
+            }
+        ]
+    },
+
+    "content_input@server_form.custom_input": {
+        "$option_label": "",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$font_size": "small",
+        "$option_text_edit_control_size": ["100%",69],
+        "$option_place_holder_text": "#custom_placeholder_text",
+        "$text_edit_box_placeholder_content_binding_name": "$option_place_holder_text",
+        "$text_edit_box_placeholder_content_binding_type": "collection",
+        "$text_edit_box_grid_collection_name": "custom_form",
+    
+        "$max_text_edit_length": 100,
+    
+        "$text_edit_box_content_binding_type": "collection",
+        "$text_edit_box_content_binding_name": "#custom_input_text",
+    
+        "$option_binding_name": "#custom_input_text",
+        "$text_box_enabled_binding_name": "#custom_input_enabled",
+        "$text_box_name": "custom_input",
+        "$label_bindings": [
+          {
+            "binding_name": "#custom_text",
+            "binding_type": "collection",
+            "binding_collection_name": "custom_form"
+          }
+        ]
+    },
+
+
+    "custom_multiline_input@common.scrollable_text_edit_box": {
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [  "100%","100%" ],
+        "offset": [ 0, 5 ],
+        "$text_alignment": "left",
+        "focus_enabled": true,
+        "max_length": 1024,
+        "$jump_to_bottom_on_update": true,
+        "$font_size": "normal",
+        "$option_place_holder_text": "#custom_placeholder_text",
+        "$text_edit_box_placeholder_content_binding_name": "$option_place_holder_text",
+        "$text_edit_box_placeholder_content_binding_type": "collection",
+        
+        "$text_edit_box_content_binding_type": "collection",
+        "$text_edit_box_content_binding_name": "#custom_input_text",
+        
+        "$option_binding_name": "#custom_input_text",
+        "$text_box_enabled_binding_name": "#custom_input_enabled",
+        "$text_box_name": "custom_input",
+        "$label_bindings": [
+          {
+            "binding_name": "#custom_text",
+            "binding_type": "collection",
+            "binding_collection_name": "custom_form"
+          }
+        ]
+    },
+
+
+    "target_input@server_form.custom_input": {
+        "$option_label": "",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$font_size": "small",
+        "$max_text_edit_length": 19,
+        "$option_text_edit_control_size": ["100%",28]
+    },
+    "submit_button_asset": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+            {
+                "image": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/mails/submit"
+                }
+            },
+            {
+                "border@common_buttons.focus_border": {
+                  "size": ["100%", "100%"],
+                  "color": "$border_color",
+                  "layer": 3,
+                  "alpha": "$border_alpha"
+                }
+              }
+        ]
+    }
+}

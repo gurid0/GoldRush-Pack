@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "GoldRush PvP Faction v1",
+    "name": "GoldRush-ChestUI",
+    "uuid": "437f4534-a4df-4ed6-bec6-65659bb02546",
+    "version": [0, 0, 1],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    {
+      "description": "GoldRush PvP Faction v1",
+      "type": "resources",
+      "uuid": "4f55a4ab-7748-5cd3-afd7-b75c6202a32e",
+      "version": [0, 0, 1]
+    }
+  ]
+}

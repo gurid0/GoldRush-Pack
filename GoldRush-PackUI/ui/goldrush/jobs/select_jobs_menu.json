@@ -1,0 +1,72 @@
+{
+    "namespace": "gd_select_jobs",
+
+    "select_jobs@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/main_cadre",
+                    "layer": 15
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65]
+                }
+            },
+            {
+                "grid_items": {
+                    "type": "grid",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": [256.5,130.5],
+                    "offset": [18.15,38],
+                    "grid_item_template": "gd_select_jobs.button",
+                    "grid_rescaling_type": "horizontal",
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#maximum_grid_items"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "button@gd_menu_form.button": {
+        "size": ["50%","50%"],
+        "$button_asset_panel": "gd_select_jobs.button_asset",
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726]
+    },
+    "button_asset": {
+        "type": "panel",
+        "size":["100%","100%"],
+        "controls": [
+            {
+                "img@gd.gd_button_image": {
+                    "size": ["100%","100%"],
+                    "offset": [0,0]
+                }
+            },
+            {
+                "border@common_buttons.focus_border": {
+                    "size": ["100%", "100%"],
+                    "color": "$border_color",
+                    "layer": 3,
+                    "alpha": "$border_alpha"
+                }
+            }
+        ]
+    }
+}

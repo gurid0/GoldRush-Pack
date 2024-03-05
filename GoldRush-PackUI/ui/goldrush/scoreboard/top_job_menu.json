@@ -1,0 +1,211 @@
+{
+    "namespace": "gd_scoreboard_job",
+
+    "scoreboard_job@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65]
+                }
+            },
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "#texture",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "('textures/goldrush/scoreboard/' + #title_text)",
+                            "target_property_name": "#texture"
+                        }
+                    ]
+                }
+            },
+            {
+                "category_panel": {
+                    "type": "stack_panel",
+                    "size": [66,100],
+                    "offset": [26,64.5],
+                    "orientation": "vertical",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "gd_scoreboard.category_button"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "(#form_button_length * 1) - 15",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "sub_cateogry_panel": {
+                    "type": "stack_panel",
+                    "size": [66,100],
+                    "offset": [17,49],
+                    "orientation": "vertical",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "gd_scoreboard_job.sub_cat_btn"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "(#form_button_length * 1) - 10",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "scrolling_panel@common.scrolling_panel": {
+                    "$show_background": false,
+                    "size": [124,100],
+                    "offset": [-34,51.5],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_left",
+                    "$scrolling_content": "gd_scoreboard_job.display_panel",
+                    "$scroll_size": [ 4, "100%" ],
+                    "$scrolling_pane_size": [ "104%", "104% - 3px" ],
+                    "$scrolling_pane_offset": [ 0, 1 ],
+                    "$scroll_bar_right_padding_size": [2, 0 ]
+                }
+            },
+            {
+                "arrows_tab_content": {
+                    "type": "stack_panel",
+                    "size": [20.8,9],
+                    "offset": [7.5,-32],
+                    "orientation": "horizontal",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "gd_scoreboard.arrow"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "left_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [-27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.left_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "right_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.right_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "bottom_tab_content": {
+                    "type": "stack_panel",
+                    "offset": [-32,188],
+                    "size": [20.8,"100%"],
+                    "orientation": "horizontal",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.bottom_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "sub_cat_btn@gd_menu_form.button": {
+        "size": [22,27],
+        "$button_asset_panel": "gd_scoreboard_job.sub_cat_btn_asset",
+        "$hover_border_color": [0.9803921568627451, 0.8392156862745098, 0.2901960784313726],
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$default_border_alpha": 0,
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(('%.4s' * #form_button_text) = 'job_')",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "sub_cat_btn_asset@gd_scoreboard.category_button_asset": {
+        "size": ["100%",23]
+    },
+
+    "display_panel@gd_scoreboard.display_panel": {
+        "bindings": [
+            {
+                "binding_name": "(#form_button_length * 1) - 14",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    }
+}

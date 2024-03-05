@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:koth_text",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/koth"
+      },
+      "geometry": {
+        "default": "geometry.koth.text"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

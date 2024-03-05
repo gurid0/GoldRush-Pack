@@ -1,0 +1,166 @@
+{
+	"materials": {
+		"version": "1.0.0",
+
+		"entity_flat:entity_alphatest": {
+			"-defines": ["FANCY"]
+		},
+		"entity_flat_blend:entity_alphablend": {
+			"-defines": ["FANCY"]
+		},
+		"entity_flat_blend_nocull:entity_alphablend": {
+			"-defines": ["FANCY"],
+			"+states": ["DisableCulling"]
+		},
+		"entity_flat_additive:entity_alphablend": {
+			"defines": [
+				"DISABLE_TINTING"
+			],
+			"+defines": [ "COLOR_BASED", "NO_TEXTURE" ],
+			"-defines": [ "USE_OVERLAY" ],
+			"+states": [ "Blending", "DisableDepthWrite", "DisableCulling" ],
+
+			"blendSrc": "SourceAlpha",
+			"blendDst": "One"
+		},
+		"entity_flat_additive_animated:entity_flat_additive": {
+			"+defines": [
+				"USE_UV_ANIM"
+			],
+			"+samplerStates": [
+				{
+					"samplerIndex": 0,
+					"textureWrap": "Repeat"
+				}
+			]
+		},
+		"entity_vision_tint:entity_alphablend": {
+			"-defines": [ "FANCY" ],
+			"+states": [ "Blending", "DisableDepthWrite", "DisableCulling" ],
+
+			"blendSrc": "SourceAlpha",
+			"blendDst": "One"
+		},
+		"entity_xray:entity_alphatest": {
+			"-defines": ["FANCY"],
+			"depthFunc": "Always"
+		},
+		"lightsaber_glow:entity_alphablend": {	
+			"-states": [
+				"DisableCulling"
+			],
+			"+states": [
+				"InvertCulling"
+			],
+			"defines": [
+				"DISABLE_TINTING",
+				"USE_EMISSIVE"
+			]
+		},
+		"box_outline:entity_alphablend": {	
+			"-states": [
+				"DisableCulling"
+			],
+			"+states": [
+				"InvertCulling"
+			],
+			"defines": [
+				"DISABLE_TINTING",
+				"USE_EMISSIVE",
+				"USE_OVERLAY"
+			]
+		},
+		"entity_emissive_alpha_animated:entity_emissive_alpha": {
+			"+defines": ["USE_UV_ANIM"]
+		},
+
+
+		"entity_glow_base:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest",
+				"StencilWrite"
+			],
+			
+			"frontFace": {
+				"stencilFunc": "Always",
+				"stencilFailOp": "Replace",
+				"stencilDepthFailOp": "Replace",
+				"stencilPassOp": "Replace"
+			},
+			"backFace": {
+				"stencilFunc": "Always",
+				"stencilFailOp": "Replace",
+				"stencilDepthFailOp": "Replace",
+				"stencilPassOp": "Replace"
+			},
+
+			"stencilRef": 4
+		},
+		"entity_glow_outline:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest",
+				"InvertCulling",
+				"Blending",
+				"DisableDepthWrite"
+			],
+			"-states": ["DisableCulling"],
+			
+			"+defines": [ "COLOR_BASED", "NO_TEXTURE" ],
+			"-defines": ["FANCY"],
+			
+			"frontFace": {
+				"stencilFunc": "NotEqual"
+			},
+
+			"stencilRef": 4
+		},
+
+
+		"skybox_small:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest",
+				"DisableDepthWrite"
+			],
+			"-defines": ["FANCY"],
+			"depthFunc": "LessEqual",
+			"backFace": {
+				"stencilFunc": "Equal"
+			},
+			"frontFace": {
+				"stencilFunc": "Equal"
+			},
+			"stencilRef": 3
+		},
+		"skybox_large:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest",
+				"StencilWrite"
+			],
+			"-defines": ["FANCY"],
+			"backFace": {
+				"stencilFunc": "Always",
+				"stencilPassOp": "Replace"
+			},
+			"frontFace": {
+				"stencilFunc": "Always",
+				"stencilPassOp": "Replace"
+			},
+			"stencilRef": 3
+		},
+		"cutscene_skybox_renderer:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest"
+			],
+			"depthFunc": "LessEqual",
+			"stencilRef": 3
+		},
+		"gunship_renderer:entity_alphatest": {
+			"+states": [
+				"EnableStencilTest"
+			],
+			"-defines": ["FANCY"],
+			"depthFunc": "GreaterEqual",
+			"stencilRef": 3
+		}
+	}
+}

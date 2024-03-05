@@ -1,0 +1,239 @@
+{
+  "namespace": "botaniste",
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": ["65%", "53%"],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/botaniste/bg_botaniste",
+          "controls": [
+            {"title@botaniste.title":  {}},
+            {"close@botaniste.close_button":  {}},
+            {"description@botaniste.desc": {}},
+            {
+              "buttons@botaniste.button_layer": {
+                "controls": [
+                  {"raisin@botaniste.raisin_button":  {}},
+                  {"berry_pink@botaniste.berry_pink":  {}},
+                  {"berry_yellow@botaniste.berry_yellow":  {}},
+
+                  {"berry_black@botaniste.berry_black":  {}},
+                  {"berry_blue@botaniste.berry_blue":  {}},
+                  {"camouflage@botaniste.camouflage":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+  // BUTTONS STYLES
+  "raisin_button@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [3, 3],
+    "$text_offset": [-25, 0],
+    "$button_text": "RAISIN\n§7(300$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'raisin')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/goldrush_grape",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+
+
+  "berry_pink@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "45%"],
+    "offset": [0, 3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Baie rose\n§7(500$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'baie rose')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/berry_pink",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+  "berry_yellow@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [-3, 3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Baie jaune\n§7(500$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'baie jaune')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/berry_yellow",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right"
+  },
+
+
+  "berry_black@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [3, -3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Baie noir\n§7(300$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'baie noir')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/berry_black",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left"
+  },
+
+
+  "berry_blue@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "45%"],
+    "offset": [0, -3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Baie bleu\n§7(500$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'baie bleu')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/sweet_berries_blue",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle"
+  },
+
+  "camouflage@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["32%", "45%"],
+    "offset": [-3, -3],
+    "$text_offset": [-1, 0],
+    "$button_text": "Fleur de camouflage\n§7(500.000$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/botaniste/button",
+    "$hover_button_texture": "textures/goldrush/botaniste/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'fleur de camouflage')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/flower_percent",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right"
+  },
+
+
+
+  // ASSETS UI
+
+
+  "button_layer@api.base_image": {
+    "size": ["90%", "60%"],
+    "$texture": "textures/goldrush/botaniste/button_layer",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -10]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/goldrush/botaniste/close_button",
+    "$hover": "textures/goldrush/botaniste/close_button_hover"
+  },
+
+  "title@api.base_image": {
+    "size": [70, 13],
+    "$texture": "textures/goldrush/botaniste/title",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 5]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 30],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 24],
+    "alpha": 0.6,
+    "$texture": "textures/goldrush/botaniste/bg_desc",
+    "controls": [
+      {
+        "label@api.base_label": {
+          "text": "#form_text",
+          "size": ["99%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

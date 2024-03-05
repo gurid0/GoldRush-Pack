@@ -1,0 +1,130 @@
+{
+    "namespace": "gd_find_faction",
+
+    "find_faction@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.6,195.624],
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/faction/find_faction_custom"
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65],
+                    "layer": 7
+                }
+            },
+            {
+                "generated_contents": {
+                    "type": "stack_panel",
+                    "size": [190, 90],
+                    "offset": [-96,-35],
+                    "orientation": "vertical",
+                    "anchor_from": "center",
+                    "anchor_to": "top_left",
+                
+                    "factory":{
+                      "name": "buttons",
+                      "control_ids": {
+                        "label": "@server_form.custom_label",
+                        "toggle": "@server_form.custom_toggle",
+                        "slider": "@server_form.custom_slider",
+                        "step_slider": "@server_form.custom_step_slider",
+                        "dropdown": "@server_form.custom_dropdown",
+                        "input": "@gd_find_faction.custom_input"
+                      }
+                    },
+                
+                    "collection_name": "custom_form",
+                    "bindings": [
+                      {
+                        "binding_name": "#custom_form_length",
+                        "binding_name_override": "#collection_length"
+                      }
+                    ]
+                }
+            },
+            {
+                "crayon": {
+                    "type": "image",
+                    "size": [29, 28],
+                    "offset": [83,-15],
+                    "anchor_from": "center",
+                    "anchor_to": "top_left",
+                    "layer": 4,
+                    "texture": "textures/goldrush/faction/crayon"
+                }
+            },
+            {
+                "submit_button@gd_menu_form.button": {
+                  "$pressed_button_name": "button.submit_custom_form",
+                  "$button_asset_panel": "gd_find_faction.button_asset",
+                  "size": [105,21],
+                  "offset": [0,-36.5],
+                  "anchor_from": "bottom_middle",
+                  "anchor_to": "bottom_middle",
+                  "layer": 6,
+                  "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+                  "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+                  "$condition|default": true,
+                  "bindings": [
+                      {
+                        "binding_name": "#form_button_text",      
+                        "binding_type": "collection",                                      
+                        "binding_collection_name": "form_buttons"
+                      },
+                      {
+                        "binding_type": "view",    
+                        "source_property_name": "$condition",
+                        "target_property_name": "#visible"
+                      }
+                  ]
+                }
+              }
+        ]
+    },
+
+    "button_asset": {
+      "type": "panel",
+      "$size|default": ["100%", "100%"],
+      "size": "$size",
+      "$padding_size|default": [0,0],
+      "controls": [
+          {
+              "background_cadre": {
+                  "type": "image",
+                  "texture": "textures/goldrush/faction/find_faction_submit",
+                  "fill": true
+              }
+          },
+          {
+            "border@common_buttons.focus_border": {
+              "size": ["100%", "100%"],
+              "color": "$border_color",
+              "layer": 3,
+              "alpha": "$border_alpha"
+            }
+          }
+      ]
+    },
+
+
+    "custom_input@server_form.custom_input": {
+        "$option_label": "",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$font_size": "extra_large",
+        "$option_text_edit_control_size": ["100%",44]
+    }
+}

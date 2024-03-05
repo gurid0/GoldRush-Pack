@@ -1,0 +1,147 @@
+{
+
+  "namespace": "boss_commons",
+
+  "boss_health_template": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [240, 61],
+    "$empty_texture|default": "textures/ui/bossbar/goldrush_bar_empty",
+    "$filled_namespace|default": "mineur_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/goldrush_background",
+    "$padding_size|default": [0, 0],
+    "$size_empty|default": [173, 7],
+    "$size_filled|default": [173, 7],
+    "$size_overlay|default": [190, 55],
+    "$empty_offset|default": [0, 0],
+    "$filled_offset|default": [0, 0],
+    "$overlay_offset|default": [0, 9],
+    "controls": [
+      {
+        "empty": {
+          "type": "image",
+          "texture": "$empty_texture",
+          "layer": 1,
+          "size": "$size_empty",
+          "offset": "$empty_offset",
+          "keep_ratio": false
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": "$padding_size"
+        }
+      },
+      {
+        "filled@$filled_namespace": {
+          "layer": 2,
+          "size": "$size_filled",
+          "offset": "$filled_offset",
+          "keep_ratio": false
+        }
+      },
+      {
+        "overlay": {
+          "type": "image",
+          "texture": "$overlay_texture",
+          "layer": 3,
+          "size": "$size_overlay",
+          "offset": "$overlay_offset",
+          "keep_ratio": false
+        }
+      }
+    ]
+  },
+  "sylvanar@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/sylvanar_empty",
+    "$filled_namespace|default": "sylvanar_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/sylvanar_background_on"
+  },
+  "sylvanar2@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/sylvanar_empty",
+    "$filled_namespace|default": "sylvanar_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/sylvanar_background_2"
+  },
+  "sylvanar3@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/sylvanar_empty",
+    "$filled_namespace|default": "sylvanar_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/sylvanar_background_3"
+  },
+  "lumberjack@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/lumberjack_bar_empty",
+    "$filled_namespace|default": "lumberjack_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/lumberjack_background"
+  },
+  "goldrush@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/goldrush_bar_empty",
+    "$filled_namespace|default": "goldrush_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/goldrush_background"
+  },
+  "farmer@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/farmer_bar_empty",
+    "$filled_namespace|default": "farmer_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/farmer_background"
+  },
+  "nexus@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/nexus_bar_empty",
+    "$filled_namespace|default": "nexus_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/nexus_overlay"
+  },
+  "troll@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/troll_bar_empty",
+    "$filled_namespace|default": "troll_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/troll_overlay"
+  },
+  "mineur@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/mineur_bar_empty",
+    "$filled_namespace|default": "mineur_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/mineur_background",
+    "$padding_size": ["100%", 4]
+  },
+  "hunter@boss_health_template": {
+    "$empty_texture|default": "textures/ui/bossbar/hunter_bar_empty",
+    "$filled_namespace|default": "hunter_filled_health",
+    "$overlay_texture|default": "textures/ui/bossbar/hunter_background",
+    "$padding_size": ["100%", 4]
+  },
+  "custom_filled_health": {
+    "type": "image",
+    "texture": "textures/ui/Black",
+    "clip_direction": "left",
+    "clip_pixelperfect": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_percentage",
+        "binding_name_override": "#clip_ratio",
+        "binding_type": "collection",
+        "binding_collection_name": "$progress_bar_collection"
+      }
+    ]
+  },
+  "sylvanar_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/sylvanar_full"
+  },
+  "lumberjack_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/lumberjack_bar_full"
+  },
+  "hunter_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/hunter_bar_full"
+  },
+  "mineur_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/mineur_bar_full"
+  },
+  "farmer_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/farmer_bar_full"
+  },
+  "goldrush_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/goldrush_bar_full"
+  },
+  "troll_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/troll_bar_full"
+  },
+  "nexus_filled_health@custom_filled_health": {
+    "texture": "textures/ui/bossbar/nexus_bar_full"
+  }
+}

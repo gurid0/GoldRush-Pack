@@ -1,0 +1,182 @@
+{
+  "namespace": "barman",
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [420, 200],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/barman/bg_barman",
+          "controls": [
+            {"title@barman.title":  {}},
+            {"close@barman.close_button":  {}},
+            {"description@barman.desc": {}},
+            {
+              "buttons@barman.button_layer": {
+                "controls": [
+                  {"soin@barman.soin":  {}},
+                  {"force@barman.force":  {}},
+                  {"haste@barman.haste":  {}},
+                  {"speed@barman.speed":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+  // BUTTONS STYLES
+  "soin@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["48%", "47% - 2px"],
+    "offset": [3, 3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Alcool de soin\n§7(5.000$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/barman/button",
+    "$hover_button_texture": "textures/goldrush/barman/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'SOIN')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/alcool_heal1",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+
+  "force@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["48%", "47% - 2px"],
+    "offset": [-3, 3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Alcool de force\n§7(35.000$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/barman/button",
+    "$hover_button_texture": "textures/goldrush/barman/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'FORCE')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/alcool_force1",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right"
+  },
+
+  "haste@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["48%", "47% - 2px"],
+    "offset": [3, -3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Alcool du mineur\n§7(5.000$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/barman/button",
+    "$hover_button_texture": "textures/goldrush/barman/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'HASTE')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/alcool_haste1",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left"
+  },
+
+  "speed@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["48%", "47% - 2px"],
+    "offset": [-3, -3],
+    "$text_offset": [-25, 0],
+    "$button_text": "Alcool de vitesse\n§7(15.000$/u)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/barman/button",
+    "$hover_button_texture": "textures/goldrush/barman/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'SPEED')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/items/alcool_speed1",
+    "$sizeicon_offset": [30, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right"
+  },
+
+
+  // ASSETS UI
+
+
+  "button_layer@api.base_image": {
+    "size": ["90%", "60%"],
+    "$texture": "textures/goldrush/barman/button_layer",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -10]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/goldrush/barman/close_button",
+    "$hover": "textures/goldrush/barman/close_button_hover"
+  },
+
+  "title@api.base_image": {
+    "size": [70, 13],
+    "$texture": "textures/goldrush/barman/title",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 5]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 30],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 24],
+    "alpha": 0.6,
+    "$texture": "textures/goldrush/barman/bg_desc",
+    "controls": [
+      {
+        "label@api.base_label": {
+          "text": "#form_text",
+          "size": ["99%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

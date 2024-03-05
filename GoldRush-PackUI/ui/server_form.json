@@ -1,0 +1,446 @@
+{
+  "namespace": "server_form",
+
+  "long_form@long_form": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "shop@custom_goldrush_ui": {
+          "$namespace": "gd_shop.shop",
+          "$condition": "(('%.4s' * #title_text) = 'SHOP')"
+        }
+      },
+      {
+        "wiki@custom_goldrush_ui": {
+          "$namespace": "gd_wiki.wiki",
+          "$condition": "(#title_text = 'Wiki')"
+        }
+      },
+      {
+        "faction_menu@custom_goldrush_ui": {
+          "$namespace": "faction_menu.faction_menu",
+          "$condition": "(#title_text = 'FACTION_MENU')"
+        }
+      },
+      {
+        "main_menu@custom_goldrush_ui": {
+          "$namespace": "gd_main_menu.main_menu",
+          "$condition": "(#title_text = 'MAIN_MENU_FORMS')"
+        }
+      },
+      {
+        "mails_menu@custom_goldrush_ui": {
+          "$namespace": "mails_menu.mails_menu",
+          "$condition": "(#title_text = 'MAILS_MENU')"
+        }
+      },
+      {
+        "bank_faction@custom_goldrush_ui": {
+          "$namespace": "gd_bank_faction.bank_faction",
+          "$condition": "(#title_text = 'BANK_FACTION')"
+        }
+      },
+      {
+        "top@custom_goldrush_ui": {
+          "$namespace": "gd_scoreboard.scoreboard",
+          "$condition": "(('%.4s' * #title_text) = 'TOP_' and (not(('%.5s' * #title_text) = 'TOP_J')))"
+        }
+      },
+      {
+        "top_job@custom_goldrush_ui": {
+          "$namespace": "gd_scoreboard_job.scoreboard_job",
+          "$condition": "(('%.5s' * #title_text) = 'TOP_J')"
+        }
+      },
+      {
+        "list_mails@custom_goldrush_ui": {
+          "$namespace": "gd_list_mails.list_mails",
+          "$condition": "(#title_text = 'LIST_MAILS')"
+        }
+      },
+      {
+        "see_mail@custom_goldrush_ui": {
+          "$namespace": "gd_see_mail.see_mail",
+          "$condition": "(#title_text = 'SEE_MAIL')"
+        }
+      },
+      {
+        "simple_quest@custom_goldrush_ui": {
+          "$namespace": "gd_simple_quest.simple_quest",
+          "$condition": "(('%.12s' * #title_text) = 'SIMPLE_QUEST')"
+        }
+      },
+      {
+        "browse_faction@custom_goldrush_ui": {
+          "$namespace": "gd_browse_faction.browse_faction",
+          "$condition": "(#title_text = 'BROWSE_FACTIONS')"
+        }
+      },
+      {
+        "montures@custom_goldrush_ui": {
+          "$namespace": "gd_montures.montures",
+          "$condition": "(#title_text = 'MONTURES')"
+        }
+      },
+      {
+        "select_jobs@custom_goldrush_ui": {
+          "$namespace": "gd_select_jobs.select_jobs",
+          "$condition": "(#title_text = 'SELECT_JOBS')"
+        }
+      },
+      {
+        "info_job@custom_goldrush_ui": {
+          "$namespace": "gd_info_job.info_job",
+          "$condition": "('%.7s' * #title_text) = 'SEE_JOB'"
+        }
+      },
+      {
+        "see_fac@custom_goldrush_ui": {
+          "$namespace": "gd_see_fac.see_fac",
+          "$condition": "(#title_text = 'SEE_FAC')"
+        }
+      },
+      {
+        "stats_info@custom_goldrush_ui": {
+          "$namespace": "stats.stats_panel",
+          "$condition": "(#title_text = 'STATS')"
+        }
+      },
+      {
+        "cosmetic_categ@custom_goldrush_ui": {
+          "$namespace": "cosmetic_category.cosmetic_panel_category",
+          "$condition": "(#title_text = 'COSMETIC_CATEGORY')"
+        }
+      },
+      {
+        "cosmetic_choice@custom_goldrush_ui": {
+          "$namespace": "cosmetic_choice.cosmetic_choice_panel",
+          "$condition": "('%.16s' * #title_text) = 'COSMETIC_CHOICE_'"
+        }
+      },
+      {
+        "enchanteur@custom_goldrush_ui": {
+          "$namespace": "enchant.main_panel",
+          "$condition": "(#title_text = 'ENCHANTEUR')"
+        }
+      },
+      {
+        "botaniste@custom_goldrush_ui": {
+          "$namespace": "botaniste.main_panel",
+          "$condition": "(#title_text = 'BOTANISTE')"
+        }
+      },
+      {
+        "open_box@custom_goldrush_ui": {
+          "$namespace": "open_box.main_panel",
+          "$condition": "(#title_text = 'OPEN_BOX')"
+        }
+      },
+      {
+        "barman@custom_goldrush_ui": {
+          "$namespace": "barman.main_panel",
+          "$condition": "(#title_text = 'BARMAN')"
+        }
+      },
+      {
+        "cosmetic_category@custom_goldrush_ui": {
+          "$namespace": "cosmetic_category.main_panel",
+          "$condition": "(#title_text = 'COSMETIC_CATEGORY')"
+        }
+      },
+      {
+        "roulette@custom_goldrush_ui": {
+          "$namespace": "roulette.main_panel",
+          "$condition": "(#title_text = 'ROULETTE')"
+        }
+      },
+      {
+        "qr_code_vote@custom_goldrush_ui": {
+          "$namespace": "qrcode_vote.main_menu",
+          "$condition": "(#title_text = 'QRCODE_VOTE')"
+        }
+      },
+      {
+        "voidstone@custom_goldrush_ui": {
+          "$namespace": "voidstone.main_panel",
+          "$condition": "(#title_text = 'VOIDSTONE')"
+        }
+      },
+      {
+        "test@custom_goldrush_ui": {
+          "$namespace": "gd_test.test",
+          "$condition": "(#title_text = 'TEST')"
+        }
+      },
+      {
+        "default_form@long_form_panel":{
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#title_text",
+              "binding_name_override": "#title_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((('%.4s' * #title_text) = 'SHOP') or #title_text = 'Wiki' or #title_text = 'VOIDSTONE' or #title_text = 'ROULETTE' or #title_text = 'COSMETIC_CATEGORY' or #title_text = 'BARMAN' or #title_text = 'OPEN_BOX' or #title_text = 'BOTANISTE' or #title_text = 'ENCHANTEUR' or ('%.16s' * #title_text) = 'COSMETIC_CHOICE_' or #title_text = 'TEST' or #title_text = 'MAIN_MENU_FORMS' or #title_text = 'COSMETIC_CATEGORY' or #title_text = 'FACTION_MENU' or #title_text = 'MAILS_MENU' or #title_text = 'BANK_FACTION' or #title_text = 'LIST_MAILS' or #title_text = 'SEE_MAIL' or (('%.4s' * #title_text) = 'TOP_') or ('%.12s' * #title_text) = 'SIMPLE_QUEST' or #title_text = 'BROWSE_FACTIONS' or #title_text = 'MONTURES' or #title_text = 'STATS' or #title_text = 'SELECT_JOBS' or (('%.7s' * #title_text) = 'SEE_JOB') or #title_text = 'SEE_FAC' or #title_text = 'QRCODE_VOTE')))",
+              "target_property_name": "#visible" 
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "long_form_panel@common_dialogs.main_panel_no_buttons" : {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [400, 200],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/bg_base",
+          "controls": [
+            {"title@server_form.custom_title":  {}},
+            {"close@server_form.close_button":  {}},
+            {"desc@server_form.desc":  {}},
+            {
+              "bg_scroll@api.base_image": {
+                "$texture": "textures/goldrush/bg_black",
+                "anchor_to": "bottom_middle",
+                "alpha": 0.5,
+                "anchor_from": "bottom_middle",
+                "offset": [0, -5],
+                "size": ["95% + 5px", 150],
+                "controls": [
+                  {
+                    "buttons@server_form.button_layers": {
+                      "controls": [
+                        {
+                          "dynamic_buttons_panel@server_form.scroll_panel": {}
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "custom_title@api.base_label": {
+    "text": "#title_text",
+    "font_type": "MinecraftTen",
+    "anchor_to": "bottom_left",
+    "anchor_from": "top_left",
+    "offset": [0, -3],
+    "font_size": "large",
+    "controls": [
+      {
+        "shadow@api.base_label": {
+          "text": "#title_text",
+          "offset": [1, 2],
+          "color": "gray",
+          "font_size": "large",
+          "font_type": "MinecraftTen",
+          "alpha": 0.4,
+          "layer": -1
+        }
+      }
+    ]
+  },
+
+
+  "desc@api.base_label": {
+    "text": "#form_text",
+    "size": ["95%"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 8],
+    "layer": 3,
+    "controls": [
+      {
+        "background@api.base_image": {
+          "$texture": "textures/goldrush/bg_desc_base",
+          "size": ["100% + 5px", "100% + 5px"],
+          "layer": -1,
+          "alpha": 0.8
+        }
+      }
+    ]
+  },
+
+
+  "close_button@api.close_button":  {
+    "offset": [3, -2],
+    "anchor_to": "bottom_right",
+    "anchor_from": "top_right",
+    "$default": "textures/ui/api/close_button",
+    "$hover": "textures/ui/api/close_button_hover"
+  },
+
+
+  "button_layers@common.scrolling_panel": {
+    "$show_background": true,
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [0, -5],
+    "size": ["100% - 8px", "100%"]
+  },
+
+
+  "scroll_buttons": {
+    "type": "stack_panel",
+    "size": ["100% + 5px", "100%c"],
+    "orientation": "vertical",
+
+    "factory":{
+      "name": "buttons",
+      "control_name": "server_form.dynamic_button"
+    },
+
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_length",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+
+  "scroll_panel@common.scrolling_panel": {
+    "$show_background": false,
+    "size": [ "100% + 8px", "100%" ],
+    "offset": [-3, 6],
+    "$scrolling_content": "server_form.scroll_buttons",
+    "$scroll_size": [ 5, "100% - 4px" ],
+    "$scrolling_pane_size": [ "100% - 4px", "100% - 2px" ],
+    "$scrolling_pane_offset": [ 5, 0 ],
+    "$scroll_bar_right_padding_size": [ 0, 0 ]
+  },
+
+  "dynamic_button@api.template_button_no_condition_image": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["98%", 32],
+    "$button_text": "#form_button_text",
+    "$default_button_texture": "textures/goldrush/button",
+    "$hover_button_texture": "textures/goldrush/button_hover",
+    "$sizeicon": [32, 32],
+    "$sizeicon_offset": [160, 0],
+    "anchor_to": "default",
+    "anchor_from": "default"
+  },
+
+
+
+
+
+
+  "custom_goldrush_ui": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#title_text",
+        "binding_name_override": "#title_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$condition",
+        "target_property_name": "#visible" 
+      }
+    ],
+    "controls": [
+      {
+        "panel@$namespace": {}
+      }
+    ]
+  },
+  "custom_form": {
+    "controls": [
+      {
+        "find_faction@custom_goldrush_ui": {
+          "$namespace": "gd_find_faction.find_faction",
+          "$condition": "(#title_text = 'FIND_FACTION')"
+        }
+      },
+      {
+        "quest_faction@custom_goldrush_ui": {
+          "$namespace": "gd_quest_faction.quest_faction",
+          "$condition": "(#title_text = 'QUEST_FACTION')"
+        }
+      },
+      {
+        "write_mail@custom_goldrush_ui": {
+          "$namespace": "gd_write_mail.write_mail",
+          "$condition": "(#title_text = 'WRITE_MAIL')"
+        }
+      },
+      {
+        "bank_input@custom_goldrush_ui": {
+          "$namespace": "gd_bank_input.bank_input",
+          "$condition": "(#title_text = 'BANK_INPUT')"
+        }
+      },
+      {
+        "create_faction@custom_goldrush_ui": {
+          "$namespace": "gd_create_faction.create_faction",
+          "$condition": "(#title_text = 'CREATE_FAC')"
+        }
+      },
+      {
+        "test@custom_goldrush_ui": {
+          "$namespace": "gd_test.test",
+          "$condition": "(#title_text = 'TEST')"
+        }
+      },
+      {
+        "defaultm@common_dialogs.main_panel_no_buttons": {
+          "$title_panel": "common_dialogs.standard_title_label",
+          "$title_size": [ "100% - 14px", 10 ],
+          "size": [225, 200],
+          "$text_name": "#title_text",
+          "$title_text_binding_type": "none",
+          "$child_control": "server_form.custom_form_panel",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_type": "global",
+              "binding_name": "#title_text",
+              "binding_name_override": "#title_text"
+      
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not(#title_text = 'FIND_FACTION' or #title_text = 'QUEST_FACTION' or #title_text = 'TEST' or #title_text = 'WRITE_MAIL' or #title_text = 'BANK_INPUT' or #title_text = 'CREATE_FAC'))",
+              "target_property_name": "#visible" 
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "main_screen_content": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "server_form_factory": {
+          "type": "factory",
+          "control_ids": {
+            "long_form": "@server_form.long_form",
+            "custom_form": "@server_form.custom_form"
+          }
+        }
+      }
+    ]
+  }
+}

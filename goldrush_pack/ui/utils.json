@@ -1,0 +1,11 @@
+{
+    "namespace" : "utils",
+
+    "gr_background@common.dialog_background_hollow_common": {
+        "type": "image",
+        "layer": 1,
+        "$fill_alpha": 0.7,
+        "texture": "textures/ui/border_1",
+        "$dialog_background_texture": "textures/ui/background"
+    }
+}

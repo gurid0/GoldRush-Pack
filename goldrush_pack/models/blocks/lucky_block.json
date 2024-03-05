@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.luckyblock",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"north": {"uv": [3, 1], "uv_size": [16, 16]},
+								"east": {"uv": [3, 1], "uv_size": [16, 16]},
+								"south": {"uv": [3, 1], "uv_size": [16, 16]},
+								"west": {"uv": [3, 1], "uv_size": [16, 16]},
+								"up": {"uv": [22, 1], "uv_size": [16, 16]},
+								"down": {"uv": [3, 1], "uv_size": [16, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,223 @@
+{
+  "namespace": "gd_shop",
+
+  "shop@common_dialogs.main_panel_no_buttons": {
+    "$show_close_button": true,
+    "$use_compact_close_button": false,
+    "size": [400,300],
+    "offset": [0,-10],
+    "controls": [
+      {
+        "background_cadre": {
+          "type": "image",
+          "size": ["100%","100%"],
+          "texture": "textures/goldrush/shop/shop_cadre",
+          "layer": 150
+        }
+      },
+      {
+        "form_cotent@gd.gd_form_content": {
+          "layer": 7,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_left",
+          "offset": [50,12],
+          "font_type": "MinecraftTen"
+        }
+      },
+      {
+        "exit_button@gd.exit_button":{
+          "offset": [7.5,36.5],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "size": [41,41],
+          "layer": 151
+        }
+      },
+      {
+        "left_panel_category": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [21.4,45.2],
+          "size": [103.5,"77%"],
+          "orientation": "vertical",
+          "factory":{
+            "name": "buttons",
+            "control_name": "gd_shop.category_button"
+          },
+
+          "collection_name": "form_buttons",
+          "bindings": [
+            {
+              "binding_name": "#form_button_length",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "right_panel_items": {
+          "type": "panel",
+          "size": [255,"77%"],
+          "offset": [51.3,45.2],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "background": {
+                "type":"image",
+                "size": ["100%","100%"],
+                "texture": "#texture",
+                "fill": true,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('textures/goldrush/shop/shop_ui_' + (#title_text - ('%.5s' * #title_text)))",
+                    "target_property_name": "#texture"
+                  }
+                ]
+              }
+            },
+            {
+              "scrolling_panel@common.scrolling_panel": {
+                "$show_background": false,
+                "size": [ "100%", "100%" ],
+                "$scrolling_content": "gd_shop.right_grid_items",
+                "$scroll_size": [ 4, "100% - 40px" ],
+                "$scrolling_pane_size": [ "101%", "100% - 2px" ],
+                "$scrolling_pane_offset": [ 0, 1 ],
+                "$scroll_bar_right_padding_size": [2, 0 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "arrows_tab_content": {
+            "type": "stack_panel",
+            "size": [20.8,9],
+            "offset": [-22.25,-13],
+            "layer": 9999,
+            "orientation": "horizontal",
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "factory":{
+                "name": "buttons",
+                "control_name": "gd_scoreboard.arrow"
+            },
+            "collection_name": "form_buttons",
+            "bindings": [
+                {
+                    "binding_name": "#form_button_length",
+                    "binding_name_override": "#collection_length"
+                }
+            ]
+        }
+    }
+    ]
+  },
+
+  "right_grid_items": {
+    "type": "grid",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": ["100%","100%c"],
+    "grid_item_template": "gd_shop.item_button",
+    "grid_rescaling_type": "horizontal",
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "(#form_button_length * 1) - 9",
+        "binding_name_override": "#maximum_grid_items"
+      }
+    ]
+  },
+
+  "category_button@gd_menu_form.button": {
+    "size": ["100%","14.28571428571429%"],
+    "$button_asset_panel": "gd_shop.category_button_asset",
+    "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+    "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.9s' * #form_button_text) = 'category_')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "item_button@gd_menu_form.button":{
+    "size": [75,75],
+    "$button_asset_panel": "gd_shop.item_button_asset",
+    "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+    "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726]
+  },
+
+
+  "category_button_asset": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "background@gd_menu_form.button_image": {
+          "fill": true
+        }
+      },
+      {
+        "border@common_buttons.focus_border": {
+          "size": ["100%", "100%"],
+          "color": "$border_color",
+          "layer": 3,
+          "alpha": "$border_alpha"
+        }
+      }
+    ]
+  },
+
+  "item_button_asset": {
+    "type": "panel",
+    "size": [70,70],
+    "controls": [
+      {
+        "image@gd_menu_form.button_image": {
+          "size": [32,32],
+          "offset": [0,-15]
+        }
+      },
+      {
+        "text@gd.gd_button_text": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [65,"default"],
+          "offset": [1,-2]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "size": ["100%","100%"],
+          "texture": "textures/goldrush/nineslice/shop_item_ores",
+          "layer": -1
+        }
+      },
+      {
+        "border@common_buttons.focus_border": {
+          "size": ["100%", "100%"],
+          "color": "$border_color",
+          "layer": 3,
+          "alpha": "$border_alpha"
+        }
+      }
+    ]
+  }
+}

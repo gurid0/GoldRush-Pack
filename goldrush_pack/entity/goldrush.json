@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:goldrush_text",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/goldrush"
+      },
+      "geometry": {
+        "default": "geometry.goldrush.text"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

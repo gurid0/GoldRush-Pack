@@ -1,0 +1,18 @@
+{
+    "format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "goldrush:amethyst_dynamite",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/amethyst_dynamite"
+			},
+			"geometry": {
+				"default": "geometry.dynamite"
+			},
+			"render_controllers": ["controller.render.dynamite"]
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:bank",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/bank"
+      },
+      "geometry": {
+        "default": "geometry.bank.text"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

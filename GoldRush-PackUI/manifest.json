@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "GoldRush UI",
+        "name": "GoldRush Pack UI",
+        "uuid": "c7896e43-81ae-83a1-97ea-b5e40545655e",
+        "version": [2, 0, 0],
+        "min_engine_version": [ 1, 18, 0 ]
+    },
+    "modules": [
+        {
+            "description": "GoldRush UI",
+            "type": "resources",
+            "uuid": "784c4806-4e16-49fc-817f-257495440ad1",
+            "version": [1, 0, 0]
+        }
+    ]
+}

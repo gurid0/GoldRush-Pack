@@ -1,0 +1,18 @@
+{
+    "format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "goldrush:box_boost",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/box_boost"
+			},
+			"geometry": {
+				"default": "geometry.box"
+			},
+			"render_controllers": ["controller.render.dynamite"]
+		}
+	}
+}

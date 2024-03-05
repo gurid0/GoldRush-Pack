@@ -1,0 +1,431 @@
+{
+
+  "namespace": "hud",
+
+
+  "centered_gui_elements": {
+    "type": "panel",
+    "controls": [
+      {
+        "hud_player_rend_desktop@hud_player_renderer": {
+          "offset": [-5, 18],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_visible_centered_gui_elements",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+
+
+
+
+  "actionbar_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "actionbar_title@hud.actionbar_title"
+      }
+    }
+  },
+
+  "player_position": {
+    "type": "image",
+    "size": [ "100%c + 6px", "100%c + 2px" ],
+    "texture": "textures/ui/Black",
+    "alpha": 0.7,
+    "controls": [
+      {
+        "player_position_text": {
+          "type": "label",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 1,
+
+          "enable_profanity_filter": false,
+          "color": "$chat_text_color",
+          "text": "#text",
+          "shadow": true,
+
+          "bindings": [
+            {
+              "binding_name": "#player_position_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#player_position_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+      }
+    ]
+  },
+
+
+
+
+  "hud_title_text": {
+    "type": "stack_panel",
+    "visible": false,
+    "orientation": "vertical",
+    "offset": [ 0, -19 ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "visible": false,
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "title_background": {
+                "visible": false,
+                "type": "image",
+                "size": [ "100%sm + 30px", "100%sm + 6px" ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            },
+            {
+              "title": {
+                "visible": false,
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [ 0, 6 ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle_frame": {
+          "visible": false,
+          "type": "panel",
+          "size": [ "100%", "100%cm" ],
+          "controls": [
+            {
+              "subtitle_background": {
+                "visible": false,
+                "type": "image",
+                "size": [ "100%sm + 20px", "100%sm + 5px" ],
+                "offset": [ 0, 16 ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$subtitle_bg": "@hud.anim_title_background_alpha_in"
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
+                  }
+                ],
+                "alpha": "$subtitle_bg"
+              }
+            },
+            {
+              "subtitle": {
+                "visible": false,
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "large",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$anim_type": 1.0
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                  },
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "alpha": "$anim_type",
+                "text_alignment": "center",
+                "offset": [ 1, 19 ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "hud_title_text_area": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "actionbar_title@hud.actionbar_title"
+      }
+    }
+  },
+
+
+
+  "actionbar_title": {
+    "type": "panel",
+    "controls": [
+      {
+        "title@title.holder": {}
+      }
+    ]
+  },
+
+
+
+
+
+  "custom_boss_bar": {
+    "type": "panel",
+    "offset": [0, -13],
+    "layer": 2,
+    "$condition|default": "true",
+    "$namespace|default": "boss_commons.ender_bossbar",
+
+    "bindings": [
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$condition",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "boss@$namespace": {}
+      }
+    ]
+  },
+
+
+
+  "boss_health_panel": {
+    "type": "panel",
+    "size": [182, 20],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$progress_bar_collection": "boss_bars",
+    "offset": [0, -5],
+    "controls": [
+      {
+        "vanilla_bossbar": {
+          "type":"panel",
+          "controls":[
+            {
+              "boss_name@boss_name_panel": {}
+            },
+            {
+              "progress_bar_for_collections@common.progress_bar_for_collections": {
+                "offset": [0, 10]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#bossName",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#bossName - $ender_boss_string) = #bossName) and ((#bossName - $raid_boss_string) = #bossName) and ((#bossName - 'TROLL') = #bossName) and ((#bossName - 'NEXUS') = #bossName) and ((#bossName - $wither_boss_string) = #bossName)) and ((#bossName - $goldrush_boss_string) = #bossName)) and ((#bossName - $mineur_boss_string) = #bossName)) and ((#bossName - $farmer_boss_string) = #bossName)) and ((#bossName - $hunter_boss_string) = #bossName)) and ((#bossName - $lumberjack_boss_string) = #bossName)) and ((#bossName - $sylvanar_1) = #bossName)) and ((#bossName - $sylvanar_2) = #bossName)) and ((#bossName - $sylvanar_3) = #bossName))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ender_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $ender_boss_string) = #bossName))",
+          "$namespace": "boss_commons.ender_bossbar"
+        }
+      },
+      {
+        "raid_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $raid_boss_string) = #bossName))",
+          "$namespace": "boss_commons.raid_bossbar"
+        }
+      },
+      {
+        "troll@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - 'TROLL') = #bossName))",
+          "$namespace": "boss_commons.troll"
+        }
+      },
+      {
+        "nexus@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - 'NEXUS') = #bossName))",
+          "$namespace": "boss_commons.nexus"
+        }
+      },
+      {
+        "wither_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $wither_boss_string) = #bossName))",
+          "$namespace": "boss_commons.wither_bossbar"
+        }
+      },
+      {
+        "goldrush_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $goldrush_boss_string) = #bossName))",
+          "$namespace": "boss_commons.goldrush"
+        }
+      },
+      {
+        "mineur_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $mineur_boss_string) = #bossName))",
+          "$namespace": "boss_commons.mineur"
+        }
+      },
+      {
+        "farmer_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $farmer_boss_string) = #bossName))",
+          "$namespace": "boss_commons.farmer"
+        }
+      },
+      {
+        "hunter_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $hunter_boss_string) = #bossName))",
+          "$namespace": "boss_commons.hunter"
+        }
+      },
+      {
+        "lumberjack_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $lumberjack_boss_string) = #bossName))",
+          "$namespace": "boss_commons.lumberjack"
+        }
+      },
+      {
+        "sylvanar_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $sylvanar_1) = #bossName))",
+          "$namespace": "boss_commons.sylvanar"
+        }
+      },
+      {
+        "sylvana2_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $sylvanar_2) = #bossName))",
+          "$namespace": "boss_commons.sylvanar2"
+        }
+      },
+      {
+        "sylvana3_bossbar@hud.custom_boss_bar": {
+          "$condition": "(not ((#bossName - $sylvanar_3) = #bossName))",
+          "$namespace": "boss_commons.sylvanar3"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bar_visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_name": "#bossName",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars"
+      }
+    ]
+  },
+
+
+
+
+  "logo": {
+    "type": "image",
+    "texture": "textures/hud/logo",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ 50, 25 ],
+    "offset": [ 4, -2 ]
+  },
+
+
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "logo@hud.logo": {} }
+        ]
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "hud_title_text_area2@hud.hud_title_text_area": {}
+        }
+      }
+    ]
+  }
+}

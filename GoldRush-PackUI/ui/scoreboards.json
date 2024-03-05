@@ -1,0 +1,177 @@
+{
+  "namespace": "scoreboard",
+
+  "scoreboard_sidebar": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "$scoreboard_offset|default": [-1, 1],
+    "$scoreboard_alignment": "top_right",
+    "offset": "$scoreboard_offset",
+    "anchor_from": "$scoreboard_alignment",
+    "anchor_to": "$scoreboard_alignment",
+    "ignored": "$scoreboards_feature_disabled",
+    "controls": [
+      {
+        "voteparty@scoreboard.players": {
+          "$condition": "(('%.3s' * #player_name_sidebar) = 'vo_')",
+          "$anchor_from": "top_right",
+          "$anchor_to": "top_right",
+          "$offset": [-2, 3],
+          "$size": [0, 20],
+          "$text": "('§z' + (#player_name_sidebar - ('%.3s' * #player_name_sidebar)))",
+          "$bg": "textures/scoreboard/entry_vote_party"
+        }
+      },
+      {
+        "discord@scoreboard.players": {
+          "$condition": "(('%.3s' * #player_name_sidebar) = 'di_')",
+          "$anchor_from": "top_right",
+          "$anchor_to": "top_right",
+          "$offset": [-117, 3],
+          "$offset_bg": [-115, 0],
+          "$size": [0, 20],
+          "$text": "('§z' + (#player_name_sidebar - ('%.3s' * #player_name_sidebar)))",
+          "$bg": "textures/scoreboard/discord_entry"
+        }
+      },
+      {
+        "money@scoreboard.players": {
+          "$condition": "(('%.3s' * #player_name_sidebar) = 'mo_')",
+          "$anchor_from": "top_left",
+          "$anchor_to": "top_left",
+          "$offset": [2, 18],
+          "$size": [0, 20],
+          "$text": "('§z' + (#player_name_sidebar - ('%.3s' * #player_name_sidebar)))",
+          "$bg": ""
+        }
+      },
+      {
+        "online_player@scoreboard.players": {
+          "$condition": "(('%.3s' * #player_name_sidebar) = 'pl_')",
+          "$anchor_from": "top_left",
+          "$anchor_to": "top_left",
+          "$offset": [2, 3],
+          "$size": [0, 20],
+          "$text": "('§z' + (#player_name_sidebar - ('%.3s' * #player_name_sidebar)))",
+          "$bg": ""
+        }
+      },
+      {
+        "faction@scoreboard.players": {
+          "$condition": "(('%.3s' * #player_name_sidebar) = 'fa_')",
+          "$anchor_from": "top_left",
+          "$anchor_to": "top_left",
+          "$offset": [2, 33],
+          "$size": [0, 20],
+          "$text": "('§z' + (#player_name_sidebar - ('%.3s' * #player_name_sidebar)))",
+          "$bg": ""
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_visible",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "($pocket_screen)",
+        "$scoreboard_offset": [0, 20],
+        "$scoreboard_alignment": "top_middle"
+      }
+    ]
+  },
+
+
+  "players": {
+    "type": "stack_panel",
+    "$anchor_from|default": "top_right",
+    "$anchor_to|default": "top_right",
+    "anchor_from": "$anchor_from",
+    "anchor_to": "$anchor_to",
+    "size": [0, 20],
+    "orientation": "horizontal",
+    "collection_name": "scoreboard_players",
+
+
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.goldrush_scoreboard_entry_final"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+
+
+
+  "goldrush_scoreboard_entry_final": {
+    "$condition|default": true,
+    "type": "panel",
+    "$size|default": [0, 20],
+    "size": "$size",
+    "$text|default": "#player_name_sidebar",
+    "anchor_from": "$anchor_from",
+    "anchor_to": "$anchor_to",
+    "$offset|default": [2, -3],
+    "$offset_bg|default": [0, 0],
+    "$bg|default": "textures/scoreboard/goldrush_scoreboard_entry",
+
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "#text",
+          "shadow": true,
+          "layer": 2,
+          "anchor_from": "$anchor_from",
+          "anchor_to": "$anchor_to",
+          "offset": "$offset",
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "$text",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "texture": "$bg",
+          "alpha": 0.75,
+          "offset": "$offset_bg",
+          "size": ["100%sm + 4px", "100%sm + 6px"],
+          "anchor_from": "$anchor_from",
+          "anchor_to": "$anchor_to"
+        }
+      }
+    ],
+
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$condition",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

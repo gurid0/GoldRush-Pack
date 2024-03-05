@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "GoldRush PvP Faction v1",
+    "name": "GoldRush-Entities",
+    "uuid": "74344416-4e46-79fc-817f-c45454540a22",
+    "version": [0, 0, 1],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    {
+      "description": "GoldRush PvP Faction v1",
+      "type": "resources",
+      "uuid": "74244416-4c46-79fc-817f-f75444542ad1",
+      "version": [0, 0, 1]
+    }
+  ]
+}

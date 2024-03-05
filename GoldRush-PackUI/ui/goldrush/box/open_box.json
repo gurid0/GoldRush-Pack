@@ -1,0 +1,174 @@
+{
+  "namespace": "open_box",
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [420, 200],
+          "alpha": 0.8,
+          "$texture": "textures/ui/api/bg_line",
+          "controls": [
+            {"title@open_box.title":  {}},
+            {"close@open_box.close_button":  {}},
+            {"description@open_box.desc": {}},
+            {
+              "buttons@open_box.button_layer": {
+                "controls": [
+                  {"one_key@open_box.one_key":  {}},
+                  {"three_key@open_box.three_key":  {}},
+                  {"all_key@open_box.all_key":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+  // BUTTONS STYLES
+  "one_key@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "100%"],
+    "offset": [0, 3],
+    "$text_offset": [0, -18],
+    "$button_text": "Ouvrir une seule clé\n§7(Animation §aON§7)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/api/button",
+    "$hover_button_texture": "textures/ui/api/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'one_key')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/ui/api/key",
+    "$sizeicon_offset": [0, 20],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+
+
+  "three_key@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "100%"],
+    "offset": [2, 3],
+    "$text_offset": [0, -18],
+    "$button_text": "Ouvrir trois clés\n§7(Animation §cOFF§7)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/api/button",
+    "$hover_button_texture": "textures/ui/api/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'three_key')",
+    "$sizeicon": [50, 50],
+    "alpha": 0.8,
+    "$icon": "textures/ui/api/three_key",
+    "$sizeicon_offset": [0, 20],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right"
+  },
+
+
+  "all_key@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "100%"],
+    "offset": [1, 3],
+    "$text_offset": [0, -18],
+    "$button_text": "Ouvrir toute les clés\n§7(Animation §cOFF§7)",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/api/button",
+    "$hover_button_texture": "textures/ui/api/button_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'all_key')",
+    "$sizeicon": [40, 40],
+    "alpha": 0.8,
+    "$icon": "textures/ui/api/all_key",
+    "$sizeicon_offset": [0, 20],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+
+
+  // ASSETS UI
+
+
+  "button_layer@api.base_image": {
+    "size": ["89%", "60%"],
+    "$texture": "",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -10]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/ui/api/close_button",
+    "$hover": "textures/ui/api/close_button_hover"
+  },
+
+  "title@api.base_label": {
+    "text": "Ouverture d'une box !",
+    "anchor_from": "top_left",
+    "anchor_to": "bottom_left",
+    "offset": [-1, -2],
+    "color": "white",
+    "font_type": "MinecraftTen",
+    "font_size": "large",
+    "controls": [
+      {
+        "title_shadow@api.base_label": {
+          "text": "Ouverture d'une box !",
+          "font_type": "MinecraftTen",
+          "font_size": "large",
+          "color": "gray",
+          "offset": [2, 1],
+          "layer": -1,
+          "alpha": 0.3
+        }
+      }
+    ]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 30],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 25],
+    "alpha": 0.6,
+    "$texture": "textures/ui/api/bg_desc",
+    "controls": [
+      {
+        "label@api.base_label": {
+          "text": "#form_text",
+          "size": ["99%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

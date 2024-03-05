@@ -1,0 +1,111 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bank.text",
+				"texture_width": 1000,
+				"texture_height": 320,
+				"visible_bounds_width": 11,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bank",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "open_terminator",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-74, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [254, 124], "uv_size": [8, 60]},
+								"south": {"uv": [262, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "b",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-66, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [68, 0], "uv_size": [32, 60]},
+								"south": {"uv": [100, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "a",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-34, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [34, 0], "uv_size": [32, 60]},
+								"south": {"uv": [66, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "n",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, 0],
+							"size": [36, 60, 0],
+							"uv": {
+								"north": {"uv": [468, 0], "uv_size": [36, 60]},
+								"south": {"uv": [504, 0], "uv_size": [-36, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "k",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [34, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [358, 0], "uv_size": [32, 60]},
+								"south": {"uv": [390, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "close_terminator",
+					"parent": "bank",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [66, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [264, 124], "uv_size": [8, 60]},
+								"south": {"uv": [272, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

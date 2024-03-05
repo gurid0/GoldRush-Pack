@@ -1,0 +1,29 @@
+{
+    "namespace": "qrcode_vote",
+
+    "main_menu@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "offset": [0,-10],
+        "controls": [
+            {
+                "exit_button@gd.exit_button":{
+                  "anchor_from": "top_right",
+                  "anchor_to": "top_right",
+                  "offset": [-1.5,6.5],
+                  "size": [26.65,26.65],
+                  "layer": 7
+                }
+            },
+            {
+                "qr_code_img": {
+                    "type": "image",
+                    "texture": "textures/goldrush/qrcode",
+                    "size": [167,167]
+                }
+            }
+        ]
+    }
+}

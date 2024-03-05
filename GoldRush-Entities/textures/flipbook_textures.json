@@ -1,0 +1,7 @@
+[
+  {
+    "flipbook_texture": "textures/entity/nexus",
+    "atlas_tile": "nexus_title",
+    "ticks_per_frame": 5
+  }
+]

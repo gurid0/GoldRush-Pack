@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.midas": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": ["texture.default"]
+		}
+	}
+}

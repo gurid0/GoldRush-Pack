@@ -1,0 +1,10 @@
+{
+    "materials":{
+        "version":"1.0.0",
+        "goldrush:nexus":{
+            "+defines":[
+                "USE_UV_ANIM"
+            ]
+        }
+    }
+}

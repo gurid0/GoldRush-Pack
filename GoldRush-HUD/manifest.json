@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "GoldRush PvP Faction v1",
+    "name": "GoldRush-HUD",
+    "uuid": "1264c544-44df-75d6-bec6-a2659b259446",
+    "version": [0, 0, 1],
+    "min_engine_version": [ 1, 20, 0 ]
+  },
+  "modules": [
+    {
+      "description": "GoldRush PvP Faction v1",
+      "type": "resources",
+      "uuid": "1f4b55ab-3428-7cd3-afd7-bf8c717d236e",
+      "version": [0, 0, 1]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "namespace": "base",
+
+  "basic_panel": {
+    "type": "panel",
+    "$size|default": [400, 200],
+    "size": "$size",
+    "$background_image|default": "",
+    "$alpha_background_image|default": 0.8,
+    "$title_image|default": "",
+    "$title_image_offset|default": [0, -24],
+    "$size_title_image|default": [120, 50],
+    "$anchor_to_title_image|default": "top_middle",
+    "$anchor_from_title_image|default": "top_middle",
+    "$size_image|default": ["100%", "100%"]
+  },
+
+  "paper_doll": {
+    "type": "custom",
+    "renderer": "paper_doll_renderer",
+    "$camera_degre|default": -30,
+    "camera_tilt_degrees": "$camera_degre",
+    "$starting_rotation|default": -30,
+    "starting_rotation": "$starting_rotation",
+    "layer": 2,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "rotation": "gesture_x",
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, -15 ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@common.screen_exit_size_animation_push",
+      "@common.screen_exit_size_animation_pop",
+      "@common.screen_entrance_size_animation_push",
+      "@common.screen_entrance_size_animation_pop"
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "viewer_panel",
+        "source_property_name": "#gesture_delta_source",
+        "target_property_name": "#gesture_delta_source"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "viewer_panel",
+        "source_property_name": "#gesture_mouse_delta_x",
+        "target_property_name": "#gesture_mouse_delta_x"
+      },
+      {
+        "binding_name": "#is_appearance_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+
+  "close_button@common.close_button": {
+    "$default|default": "textures/ui/close_button_default",
+    "$hover|default": "textures/ui/close_X_button_hover",
+    "$pressed|default": "textures/ui/close_X_button_hover",
+    "controls": [
+      {
+        "default@common.close_button_panel": {
+          "$close_button_texture": "$default"
+        }
+      },
+      {
+        "hover@common.close_button_panel": {
+          "$close_button_texture": "$hover"
+        }
+      },
+      {
+        "pressed@common.close_button_panel": {
+          "$close_button_texture": "$pressed"
+        }
+      }
+    ]
+  },
+
+
+  "light_text_button@common_buttons.light_text_button": {
+
+    "$default_state_panel|default": "$button_asset_panel",
+    "$hover_state_panel|default": "$button_asset_panel",
+
+    "$default_border_alpha|default": 5,
+    "$focus_enabled": false,
+    "$focus_wrap_enabled": false,
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$hover_border_alpha|default": 5,
+
+    "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+    "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+
+    "controls": [
+      {
+        "default@$default_state_panel": {
+          "$new_ui_button_texture": "$default_button_texture",
+          "$border_color": "$default_border_color",
+          "$border_visible|default": false,
+          "$hover_text": false,
+          "$border_alpha": "$default_border_alpha",
+
+          "$default_state": true
+        }
+      },
+      {
+        "hover@$hover_state_panel": {
+          "$new_ui_button_texture": "$default_button_texture",
+          "$border_color": "$hover_border_color",
+          "$border_layer": 5,
+          "$border_visible|default": true,
+          "$hover_text": true,
+          "$border_alpha": "$hover_border_alpha",
+
+          "$hover_state": true
+        }
+      },
+      {
+        "pressed@$default_state_panel": {
+          "$new_ui_button_texture": "$default_button_texture",
+          "$border_color": "$default_border_color",
+          "$border_visible|default": false,
+          "$hover_text": false,
+          "$border_alpha": "$default_border_alpha",
+
+          "$pressed_state": true
+        }
+      },
+      {
+        "locked@$default_state_panel": {
+          "$new_ui_button_texture": "$default_button_texture",
+          "$border_color": "$default_border_color",
+          "$border_visible|default": false,
+          "$hover_text": false,
+          "$border_alpha": "$default_border_alpha",
+
+          "$locked_state": true
+        }
+      }
+    ]
+  }
+}

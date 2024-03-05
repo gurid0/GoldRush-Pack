@@ -1,0 +1,17 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "vanilla",
+  "texture_data": {
+    "emerald_chest_lock": {
+      "textures": "textures/chest/emerald_chest_lock"
+    },
+    "amethyst_chest_lock": {
+      "textures": "textures/chest/amethyst_chest_lock"
+    },
+    "platinum_chest_lock": {
+      "textures": "textures/chest/platinum_chest_lock"
+    }
+  },
+  "texture_name": "atlas.terrain"
+}

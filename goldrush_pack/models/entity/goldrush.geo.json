@@ -1,0 +1,171 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.goldrush.text",
+				"texture_width": 1000,
+				"texture_height": 320,
+				"visible_bounds_width": 18,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "goldrush",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "open_terminator",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-134, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [254, 124], "uv_size": [8, 60]},
+								"south": {"uv": [262, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "g",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-126, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [238, 0], "uv_size": [32, 60]},
+								"south": {"uv": [270, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "o",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-94, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [506, 0], "uv_size": [32, 60]},
+								"south": {"uv": [538, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "l",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-62, 0, 0],
+							"size": [28, 60, 0],
+							"uv": {
+								"north": {"uv": [392, 0], "uv_size": [28, 60]},
+								"south": {"uv": [420, 0], "uv_size": [-28, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "d",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-34, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [136, 0], "uv_size": [32, 60]},
+								"south": {"uv": [168, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "r",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [612, 0], "uv_size": [32, 60]},
+								"south": {"uv": [644, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "u",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [30, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [714, 0], "uv_size": [32, 60]},
+								"south": {"uv": [746, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "s",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [62, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [646, 0], "uv_size": [32, 60]},
+								"south": {"uv": [678, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "h",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [94, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [272, 0], "uv_size": [32, 60]},
+								"south": {"uv": [304, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "close_terminator",
+					"parent": "goldrush",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [126, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [264, 124], "uv_size": [8, 60]},
+								"south": {"uv": [272, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

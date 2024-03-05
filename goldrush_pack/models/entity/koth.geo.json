@@ -1,0 +1,111 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.koth.text",
+				"texture_width": 1000,
+				"texture_height": 320,
+				"visible_bounds_width": 10,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "koth",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "open_terminator",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-72, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [254, 124], "uv_size": [8, 60]},
+								"south": {"uv": [262, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "k",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-64, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [358, 0], "uv_size": [32, 60]},
+								"south": {"uv": [390, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "o",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-32, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [506, 0], "uv_size": [32, 60]},
+								"south": {"uv": [538, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "t",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [680, 0], "uv_size": [32, 60]},
+								"south": {"uv": [712, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "h",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [32, 0, 0],
+							"size": [32, 60, 0],
+							"uv": {
+								"north": {"uv": [272, 0], "uv_size": [32, 60]},
+								"south": {"uv": [304, 0], "uv_size": [-32, 60]}
+							}
+						}
+					]
+				},
+				{
+					"name": "close_terminator",
+					"parent": "koth",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [64, 0, 0],
+							"size": [8, 60, 0],
+							"uv": {
+								"north": {"uv": [264, 124], "uv_size": [8, 60]},
+								"south": {"uv": [272, 124], "uv_size": [-8, 60]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

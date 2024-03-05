@@ -1,0 +1,104 @@
+{
+    "namespace": "gd_test",
+
+    "test@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.6,195.624],
+        "controls": [
+            {
+              "exit_button@gd.exit_button":{
+                  "anchor_from": "top_right",
+                  "anchor_to": "top_right",
+                  "offset": [-1.5,6.5],
+                  "size": [26.65,26.65]
+              }
+            },
+          
+            {
+              "skin_model@npc_interact.skin_model": {
+                "size": [140,60]
+              }
+            },
+            {
+                "player_head@gd_test.player_head": {
+                  "size": [
+                   120,
+                   120
+                  ]
+                }
+            },
+            {
+              "label":{
+                "type": "label",
+                "size": [ 100, 20 ],
+                "text": "Ho fdp tu te montreee ouuu "
+              }
+            }
+        ]
+    },
+    "player_head": {
+      "type": "panel",
+                                      "anchor_from": "top_left",
+                                      "anchor_to": "top_left",
+                                      "clips_children": true,
+                                      "size": [
+                                          60,
+                                          60
+                                      ],
+                                      "layer": 3,
+                                      "offset": [
+                                          -4,
+                                          -22
+                                      ],
+                                      "controls": [
+                                          {
+                                              "player_head_renderer": {
+                                                "type": "custom",
+                                                  "renderer": "paper_doll_renderer",
+                                                  "use_uuid": true,
+                                                  "property_bag": {
+                                                    "#player_uuid": "0be43110-3575-376a-804b-bf35ed89d006"
+                                                  },
+                                                  "size": [
+                                                      60,
+                                                      60
+                                                  ],
+                                                  "offset": [
+                                                      0,
+                                                      50
+                                                  ]
+                                              }
+                                            }]},
+                                            
+      "dynamic_button@gd_test.light_text_button": {
+        "$pressed_button_name": "button.form_button_click",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [ "100%", 32 ],
+
+        "$button_text": "#form_button_text",
+        "$button_text_binding_type": "collection",
+        "$button_text_grid_collection_name": "form_buttons",
+        "$button_text_max_size": [ "100%", 20 ],
+        "bindings": [
+          {
+            "binding_type": "collection_details",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      },
+
+    "light_text_button@common_buttons.light_text_button": {
+
+        "$button_state_panel": "gd_main_menu.button_assets"
+    }
+
+
+
+
+
+
+    
+}

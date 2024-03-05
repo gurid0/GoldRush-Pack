@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "GoldRush Sounds",
+        "name": "GoldRush Pack Sounds",
+        "uuid": "57896e43-81ae-83a1-97ea-b4e40245855e",
+        "version": [2, 0, 0],
+        "min_engine_version": [ 1, 18, 0 ]
+    },
+    "modules": [
+        {
+            "description": "GoldRush Sounds",
+            "type": "resources",
+            "uuid": "754c4806-4e16-49fc-817f-255494440ad1",
+            "version": [1, 0, 0]
+        }
+    ]
+}

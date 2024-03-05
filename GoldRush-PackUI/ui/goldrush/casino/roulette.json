@@ -1,0 +1,167 @@
+{
+  "namespace": "roulette",
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [470, 240],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/casino/bg",
+          "controls": [
+            {"title@roulette.title":  {}},
+            {"close@roulette.close_button":  {}},
+            {"description@roulette.desc": {}},
+            {"render@roulette.roulette_render": {}},
+            {
+              "buttons@roulette.button_layer": {
+                "controls": [
+                  {"red@roulette.red":  {}},
+                  {"green@roulette.green":  {}},
+                  {"grey@roulette.grey":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+  // BUTTONS STYLES
+  "red@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["80%", "33%"],
+    "offset": [0, -3],
+    "$text_offset": [-55, 0],
+    "$button_text": "COULEUR ROUGE",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/casino/button_red",
+    "$hover_button_texture": "textures/goldrush/casino/button_red_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'red')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/goldrush/casino/red_jeton",
+    "$sizeicon_offset": [75, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+
+  "green@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["80%", "33%"],
+    "offset": [0, 0],
+    "$text_offset": [-55, 0],
+    "$button_text": "COULEUR VERTE",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/casino/button_green",
+    "$hover_button_texture": "textures/goldrush/casino/button_green_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'green')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/goldrush/casino/green_jeton",
+    "$sizeicon_offset": [75, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "center",
+    "anchor_from": "center"
+  },
+
+
+  "grey@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["80%", "33%"],
+    "offset": [0, 3],
+    "$text_offset": [-55, 0],
+    "$button_text": "COULEUR GRISE",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/goldrush/casino/button_grey",
+    "$hover_button_texture": "textures/goldrush/casino/button_grey_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$condition": "(#form_button_text = 'grey')",
+    "$sizeicon": [32, 32],
+    "alpha": 0.8,
+    "$icon": "textures/goldrush/casino/grey_jeton",
+    "$sizeicon_offset": [75, 0],
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle"
+  },
+
+  // ASSETS UI
+
+
+  "button_layer@api.base_image": {
+    "size": [235, 120],
+    "$texture": "",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [1, -30]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/goldrush/casino/close_button",
+    "$hover": "textures/goldrush/casino/close_button_hover"
+  },
+
+
+  "roulette_render@api.base_image": {
+    "$texture": "textures/goldrush/casino/roulette_render",
+    "size": ["48%", "50%"],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [115, 30]
+  },
+
+  "title@api.base_image": {
+    "size": [90, 13],
+    "$texture": "textures/goldrush/casino/title_roulette",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 5]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 30],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 24],
+    "alpha": 0.6,
+    "$texture": "textures/goldrush/casino/desc",
+    "controls": [
+      {
+        "label@api.base_label": {
+          "text": "#form_text",
+          "size": ["97%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  }
+}

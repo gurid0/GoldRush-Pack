@@ -1,0 +1,167 @@
+{
+  "namespace": "enchant",
+
+
+
+  // INTERFACE ===========================
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": [420, 200],
+          "alpha": 0.8,
+          "$texture": "textures/ui/enchant/bg_enchant",
+          "controls": [
+            {"title@enchant.title":  {}},
+            {"close@enchant.close_button":  {}},
+            {"description@enchant.desc": {}},
+            {
+              "buttons@enchant.button_layer": {
+                "controls": [
+                  {"one@enchant.one":  {}},
+                  {"two@enchant.two":  {}},
+                  {"three@enchant.three":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // =========================================
+
+
+
+  // ASSETS UI
+  "button_layer@api.base_image": {
+    "size": ["90%", "60%"],
+    "$texture": "textures/goldrush/enchant/button_layer",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0, -10]
+  },
+
+  "close_button@api.close_button":  {
+    "$default": "textures/ui/enchant/close_button",
+    "$hover": "textures/ui/enchant/close_button_hover"
+  },
+
+  "title@api.base_label": {
+    "text": "Enchanteur",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "font_type": "MinecraftTen",
+    "font_scale_factor": 1.2,
+    "offset": [0, 5]
+  },
+
+  "desc@api.base_image": {
+    "size": ["90%", 40],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 24],
+    "alpha": 0.6,
+    "$texture": "textures/ui/enchant/bg_desc",
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "text": "#form_text",
+          "size": ["99%", "98%"],
+          "offset": [3, 3],
+          "alpha": 1.0,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 5
+        }
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+
+
+  "one@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["98%", "28% - 1px"],
+    "offset": [0, 3],
+    "$text_offset": [10, 0],
+    "$button_text": "1 Niveau d'éxperience §5CONTRE §f1000§5$",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/enchant/button",
+    "$hover_button_texture": "textures/ui/enchant/button_hover",
+    "$pressed_button_texture": "textures/ui/enchant/button_hover",
+    "$locked_button_texture": "textures/ui/enchant/button_hover",
+    "$focus_enabled": false,
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$focus_wrap_enabled": false,
+    "$condition": "(#form_button_text = 'one')",
+    "$sizeicon": [16, 16],
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+  "two@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["98%", "28% - 1px"],
+    "offset": [0, 0],
+    "$text_offset": [10, 0],
+    "$button_text": "15 Niveau d'éxperience §5CONTRE §f15000§5$",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/enchant/button",
+    "$hover_button_texture": "textures/ui/enchant/button_hover",
+    "$pressed_button_texture": "textures/ui/enchant/button_hover",
+    "$locked_button_texture": "textures/ui/enchant/button_hover",
+    "$focus_enabled": false,
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$focus_wrap_enabled": false,
+    "$condition": "(#form_button_text = 'two')",
+    "$sizeicon": [16, 16],
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "center",
+    "anchor_from": "center"
+  },
+
+
+  "three@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["98%", "28% - 1px"],
+    "offset": [0, -2],
+    "$text_offset": [10, 0],
+    "$button_text": "30 Niveau d'éxperience §5CONTRE §f30000§5$",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/enchant/button",
+    "$hover_button_texture": "textures/ui/enchant/button_hover",
+    "$pressed_button_texture": "textures/ui/enchant/button_hover",
+    "$locked_button_texture": "textures/ui/enchant/button_hover",
+    "$focus_enabled": false,
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$focus_wrap_enabled": false,
+    "$condition": "(#form_button_text = 'three')",
+    "$sizeicon": [16, 16],
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle"
+  }
+}

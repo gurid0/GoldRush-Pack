@@ -1,0 +1,354 @@
+{
+  "goldrush:pink_gold_block": {
+    "textures": "pink_gold_block"
+  },
+  "goldrush:easteregg": {
+    "textures": "easteregg"
+  },
+  "goldrush:amethyst_ore": {
+    "textures": "amethyst_ore"
+  },
+  "goldrush:distillerie": {
+    "textures": "distillerie",
+    "sound" : "copper"
+  },
+  "goldrush:copper_ore": {
+    "textures": "copper_ore"
+  },
+  "goldrush:deepslate_copper_ore": {
+    "textures": "deepslate_copper_ore"
+  },
+  "goldrush:cobble_compressed": {
+    "textures": "cobble_compressed"
+  },
+  "goldrush:deepslate_amethyst_ore": {
+    "textures": "deepslate_amethyst_ore"
+  },
+  "goldrush:deepslate_emerald_ore": {
+    "textures": "deepslate_emerald_ore"
+  },
+  "goldrush:emerald_chest": {
+    "textures": "emerald_chest"
+  },
+
+  "goldrush:platinum_chest": {
+    "textures": "platinum_chest"
+  },
+  "goldrush:flower_percent": {
+    "textures": "flower_percent",
+    "sound" : "azalea_leaves"
+  },
+  "goldrush:deepslate_platinum_ore": {
+    "textures": "deepslate_platinum_ore"
+  },
+  "goldrush:deepslate_gold_ore": {
+    "textures": "deepslate_gold_ore"
+  },
+  "goldrush:deepslate_gold_white_ore": {
+    "textures": "deepslate_gold_white_ore"
+  },
+  "goldrush:sulfur_ore": {
+    "textures": "sulfur_ore"
+  },
+  "goldrush:jump_block": {
+    "textures": "jump_block"
+  },
+
+  "goldrush:emerald_ore": {
+    "textures": "emerald_ore_custom"
+  },
+  "goldrush:amethyst_block": {
+    "textures": "amethyst_block"
+  },
+  "goldrush:emerald_block": {
+    "textures": "emerald_block"
+  },
+  "goldrush:gold_block": {
+    "textures": "gold_block"
+  },
+  "goldrush:copper_block": {
+    "textures": "copper_block"
+  },
+  "goldrush:gold_white_block": {
+    "textures": "gold_white_block"
+  },
+  "goldrush:gold_ore": {
+    "textures": "gold_ore_custom"
+  },
+  "goldrush:gold_white_ore": {
+    "textures": "gold_white_ore"
+  },
+  "goldrush:desktop": {
+    "textures": "desktop"
+  },
+  "goldrush:fossil_ore": {
+    "textures": "fossil_ore"
+  },
+  "goldrush:geode_ore": {
+    "textures": "geode_ore"
+  },
+  "goldrush:netherite_ore": {
+    "textures": "netherite_ore"
+  },
+  "goldrush:pink_gold_ore": {
+    "textures": "pink_gold_ore"
+  },
+  "goldrush:platinum_block": {
+    "textures": "platinum_block"
+  },
+  "goldrush:platinum_ore": {
+    "textures": "platinum_ore"
+  },
+  "goldrush:quartz_ore": {
+    "textures": "quartz_ore"
+  },
+  "goldrush:xp_ore": {
+    "textures": "xp_ore"
+  },
+  "goldrush:glowstone_ore": {
+    "textures": "glowstone_ore"
+  },
+  "goldrush:lucky_ore": {
+    "textures": "lucky_ore"
+  },
+  "goldrush:luckyblock": {
+    "textures": "luckyblock"
+  },
+  "goldrush:christmas_lucky_block": {
+    "textures": "christmas_lucky_block"
+  },
+  "goldrush:villager_statue": {
+    "textures": "villager_statue"
+  },
+  "goldrush:water": {
+    "textures" : {
+      "down" : "still_water",
+      "side" : "flowing_water",
+      "up" : "still_water"
+    }
+  },
+  "goldrush:barrel1": {
+    "textures": "barrel1"
+  },
+  "goldrush:orihalcon_ore": {
+    "textures": "orihalcon_ore"
+  },
+  "goldrush:purified_gold_block": {
+    "textures": "purified_gold_block"
+  },
+  "goldrush:reinforced_gold_block": {
+    "textures": "reinforced_gold_block"
+  },
+  "goldrush:barrel_side": {
+    "textures": "barrel_side"
+  },
+  "goldrush:endbrick_cracked": {
+    "textures": "endbrick_cracked"
+  },
+  "goldrush:end_block_chiseled": {
+    "textures": "end_block_chiseled"
+  },
+  "goldrush:end_carved": {
+    "textures": "end_carved"
+  },
+
+  "goldrush:puente4" : {
+    "textures": "puente4"
+  },
+  "goldrush:wheat_obsidian_stage_0": {
+    "textures": "wheat_obsidian_stage_0"
+  },
+  "goldrush:wheat_obsidian_stage_1": {
+    "textures": "wheat_obsidian_stage_1"
+  },
+  "goldrush:wheat_obsidian_stage_2": {
+    "textures": "wheat_obsidian_stage_2"
+  },
+  "goldrush:wheat_obsidian_stage_3": {
+    "textures": "wheat_obsidian_stage_3"
+  },
+
+
+
+  "goldrush:obsidian_reinforced": {
+    "textures": {
+      "down": "obsidian_reinforced_top",
+      "side": "obsidian_reinforced",
+      "up": "obsidian_reinforced_top"
+    }
+  },
+  "goldrush:obsidian_emerald": {
+    "textures": "obsidian_emerald"
+  },
+  "goldrush:obsidian_amethyst": {
+    "textures": "obsidian_amethyst"
+  },
+  "goldrush:obsidian_platinum": {
+    "textures": "obsidian_platinum"
+  },
+  "goldrush:obsidian_reinforced_pink_gold": {
+    "textures": {
+      "down": "obsidian_pink_gold_top",
+      "side": "obsidian_reinforced_pink_gold",
+      "up": "obsidian_pink_gold_top"
+    }
+  },
+  "goldrush:obsidian_reinforced_platinum": {
+    "textures": {
+      "down": "obsidian_platinum_top",
+      "side": "obsidian_reinforced_platinum",
+      "up": "obsidian_platinum_top"
+    }
+  },
+  "goldrush:amethyst_pyke": {
+    "textures": "amethyst_pyke"
+  },
+  "goldrush:pink_gold_pyke": {
+    "textures": "pink_gold_pyke"
+  },
+  "goldrush:platinum_pyke": {
+    "textures": "platinum_pyke"
+  },
+  "goldrush:reinforced_gold_pyke": {
+    "textures": "reinforced_gold_pyke"
+  },
+  "goldrush:amethyst_chest": {
+    "textures": "amethyst_chest"
+  },
+  "goldrush:platinum_brick": {
+    "textures": "platinum_brick"
+  },
+  "goldrush:diamond_chest": {
+    "textures": "diamond_chest"
+  },
+  "goldrush:gold_chest": {
+    "textures": "gold_chest"
+  },
+  "goldrush:pink_gold_chest": {
+    "textures": "pink_gold_chest"
+  },
+  "goldrush:egg": {
+    "textures": "egg"
+  },
+  "goldrush:easter_egg": {
+    "textures": "easter_egg"
+  },
+  "goldrush:raisin_crops_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "raisin_crops_stage_0"
+  },
+  "goldrush:raisin_crops_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "raisin_crops_stage_1"
+  },
+  "goldrush:raisin_crops_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "raisin_crops_stage_2"
+  },
+  "goldrush:raisin_crops_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "raisin_crops_stage_3"
+  },
+
+  "goldrush:berry_blue_crops_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_blue_crops_stage_0"
+  },
+  "goldrush:berry_blue_crops_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_blue_crops_stage_1"
+  },
+  "goldrush:berry_blue_crops_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_blue_crops_stage_2"
+  },
+  "goldrush:berry_blue_crops_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_blue_crops_stage_3"
+  },
+
+  "goldrush:berry_pink_crops_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_pink_crops_stage_0"
+  },
+  "goldrush:berry_pink_crops_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_pink_crops_stage_1"
+  },
+  "goldrush:berry_pink_crops_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_pink_crops_stage_2"
+  },
+  "goldrush:berry_pink_crops_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_pink_crops_stage_3"
+  },
+
+
+  "goldrush:berry_black_crops_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_black_crops_stage_0"
+  },
+  "goldrush:berry_black_crops_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_black_crops_stage_1"
+  },
+  "goldrush:berry_black_crops_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_black_crops_stage_2"
+  },
+  "goldrush:berry_black_crops_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_black_crops_stage_3"
+  },
+
+  "goldrush:berry_yellow_crops_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_yellow_crops_stage_0"
+  },
+  "goldrush:berry_yellow_crops_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_yellow_crops_stage_1"
+  },
+  "goldrush:berry_yellow_crops_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_yellow_crops_stage_2"
+  },
+  "goldrush:berry_yellow_crops_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "berry_yellow_crops_stage_3"
+  },
+
+
+  "goldrush:tomato_stage_0": {
+    "sound" : "azalea_leaves",
+    "textures": "tomato_stage_0"
+  },
+  "goldrush:tomato_stage_1": {
+    "sound" : "azalea_leaves",
+    "textures": "tomato_stage_1"
+  },
+  "goldrush:tomato_stage_2": {
+    "sound" : "azalea_leaves",
+    "textures": "tomato_stage_2"
+  },
+  "goldrush:tomato_stage_3": {
+    "sound" : "azalea_leaves",
+    "textures": "tomato_stage_3"
+  },
+  "goldrush:tomato_stage_4": {
+    "sound" : "azalea_leaves",
+    "textures": "tomato_stage_4"
+  },
+
+
+  "goldrush:dirt_compressed": {
+    "sound": "gravel",
+    "textures": "dirt_compressed"
+  },
+
+  "goldrush:barrel" : {
+    "sound" : "wood",
+    "textures": "barrel"
+  }
+}

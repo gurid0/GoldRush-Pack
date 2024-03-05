@@ -1,0 +1,264 @@
+{
+    "namespace": "gd_simple_quest",
+
+    "simple_quest@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [400, 200],
+        "controls": [
+            {
+                "background_cadre": {
+                  "type": "image",
+                  "size": ["100%","100%"],
+                  "alpha": 0.8,
+                  "texture": "textures/goldrush/npc/npc_bg"
+                }
+            },
+            {
+              "exit_button@gd.exit_button":{
+                  "anchor_from": "top_right",
+                  "anchor_to": "top_right",
+                  "offset": [8.5,-20],
+                  "size": [26.65,26.65]
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "text": "#text",
+                "size": ["100%", 40],
+                "font_size": "large",
+                "font_type": "MinecraftTen",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [0,-25],
+                "bindings": [
+                  {
+                     "binding_type": "view",
+                     "source_property_name": "(#title_text - ('%.13s' * #title_text))",
+                     "target_property_name": "#text"
+                  }
+                ]
+              }
+            },
+            {
+              "background_content": {
+                "type": "image",
+                "size": ["95%", 45],
+                "offset": [10,10],
+                "alpha": 0.5,
+                "texture": "textures/goldrush/npc/bg_desc",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                  {
+                    "content": {
+                      "type": "label",
+                      "size": ["100%","100%"],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [5,5],
+                      "text": "#form_text",
+                      "layer": 4
+                    }
+                  }
+                ]
+              
+              }
+            },
+            {
+              "background_skin_v": {
+                "type": "image",
+                "size": ["18%","67%"],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "alpha": 0.5,
+                "offset": [10,-7],
+                "texture": "textures/goldrush/npc/bg_desc",
+                "controls": [
+                  {
+                    "skin_view@gd.skin_view": {
+                      "size": [ "100%", "100%"],
+                      "offset": [0,13],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$starting_rotation": -30
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "objectif_stack_panel": {
+                "type": "stack_panel",
+                "size": ["22%", "67%"],
+                "offset": [-25,-40.5],
+                "anchor_from": "center",
+                "anchor_to": "top_right",
+                "orientation": "vertical",
+                "factory":{
+                    "name": "buttons",
+                    "control_name": "gd_simple_quest.objectif_button"
+                },
+            
+                "collection_name": "form_buttons",
+                "bindings": [
+                    {
+                    "binding_name": "(#form_button_length * 1) - 2",
+                    "binding_name_override": "#collection_length"
+                    }
+                ]
+              }
+            },
+            {
+              "action_stack_panel": {
+                "type": "stack_panel",
+                "size": ["50% + 5px", "60% + 1px"],
+                "offset": [-15,-41.5],
+                "anchor_from": "center",
+                "anchor_to": "top_left",
+                "orientation": "vertical",
+                "factory":{
+                    "name": "buttons",
+                    "control_name": "gd_simple_quest.action_button"
+                },
+            
+                "collection_name": "form_buttons",
+                "bindings": [
+                    {
+                    "binding_name": "#form_button_length",
+                    "binding_name_override": "#collection_length"
+                    }
+                ]
+              }
+            }
+        ]
+    },
+
+    "objectif_button": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "bindings": [
+        {
+          "binding_name": "#form_button_text",      
+          "binding_type": "collection",                                      
+          "binding_collection_name": "form_buttons"
+        }
+      ],
+      "controls": [
+        {"objectif_button_asset@gd_simple_quest.objectif_button_asset":{}}
+      ]
+    },
+
+    "objectif_button_asset": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "controls": [
+        {
+          "background": {
+            "type": "image",
+            "size": ["100%", "100%"],
+            "texture": "textures/goldrush/npc/bg_desc",
+            "alpha": 0.5
+          }
+        },
+        {
+          "title":{
+            "type": "label",
+            "text": "§6OBJECTIF",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "font_type": "MinecraftTen",
+            "offset": [0, 3],
+            "layer": 2
+          }
+        },
+        {
+          "label_explicative": {
+            "type": "label",
+            "text": "#form_button_text",
+            "size": ["89%", "100%"],
+            "offset": [2.5, 25],
+            "layer": 2,
+            "bindings": [
+              {
+                "binding_name": "#form_button_text",      
+                "binding_type": "collection",                                      
+                "binding_collection_name": "form_buttons"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "action_button@gd_menu_form.button": {
+      "size": ["100%", "56%"],
+      "$button_asset_panel": "gd_simple_quest.action_button_asset",
+      "$hover_state_panel":  "gd_simple_quest.action_button_asset_on",
+      "bindings": [
+        {
+            "binding_type": "collection_details",
+            "binding_collection_name": "form_buttons"
+        },
+        {
+          "binding_name": "#form_button_text",      
+          "binding_type": "collection",                                      
+          "binding_collection_name": "form_buttons"
+        },
+        {
+          "binding_type": "view",    
+          "source_property_name": "(('%.4s' * #form_button_text) = 'BTN_')",
+          "target_property_name": "#visible"
+        }
+    ]
+    },
+
+    "action_button_asset": {
+      "type": "panel",
+      "size": ["100%", "94%"],
+      "$texture_bg|default": "textures/goldrush/npc/button_base",
+      "controls": [
+        {
+          "background": {
+            "type": "image",
+            "alpha": 0.8,
+            "texture": "$texture_bg"
+          }
+        },
+        {
+          "text": {
+            "type": "label",
+            "text": "#text",
+            "font_type": "MinecraftTen",
+            "layer": 2,
+            "size": ["100%", "100%"],
+            "offset": [11,42],
+            "bindings": [
+              {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+              },
+              {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#form_button_text - ('%.4s' * #form_button_text))",
+                "target_property_name": "#text"
+            }
+            ]
+          }
+        }
+      ]
+    },
+
+    "action_button_asset_on@gd_simple_quest.action_button_asset": {
+      "$texture_bg": "textures/goldrush/npc/button_hover"
+    }
+}

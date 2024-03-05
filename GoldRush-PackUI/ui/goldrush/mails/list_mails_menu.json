@@ -1,0 +1,169 @@
+{
+    "namespace": "gd_list_mails",
+
+    "list_mails@common_dialogs.main_panel_no_buttons":{
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/mails/list_mails"
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                  "anchor_from": "top_right",
+                  "anchor_to": "top_right",
+                  "offset": [-1.5,6.5],
+                  "size": [26.65,26.65]
+                }
+            },
+            {
+                "scrolling_panel@common.scrolling_panel": {
+                    "$show_background": false,
+                    "size": [ 220, 92 ],
+                    "$scrolling_content": "gd_list_mails.stack_panel",
+                    "$scroll_size": [ 4, "100%" ],
+                    "$scrolling_pane_size": [ "100%", "100% - 2px" ],
+                    "$scrolling_pane_offset": [ 2, 1 ],
+                    "$scroll_bar_right_padding_size": [2, 0 ]
+                }
+            },
+            {
+                "left_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [-27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.left_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "right_tab_content":{
+                    "type": "stack_panel",
+                    "offset": [27,41],
+                    "size": [20.8,"100%"],
+                    "orientation": "vertical",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.right_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            },
+            {
+                "bottom_tab_content": {
+                    "type": "stack_panel",
+                    "offset": [-32,188],
+                    "size": [20.8,"100%"],
+                    "orientation": "horizontal",
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "factory":{
+                        "name": "buttons",
+                        "control_name": "faction_menu.bottom_tab"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                        "binding_name": "#form_button_length",
+                        "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+
+    "stack_panel": {
+        "type": "stack_panel",
+        "size": ["100%","100%c"],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "orientation": "vertical",
+        "factory":{
+            "name": "buttons",
+            "control_name": "gd_list_mails.list_button"
+        },
+        "collection_name": "form_buttons",
+        "bindings": [
+            {
+            "binding_name": "(#form_button_length * 1) - 8",
+            "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+
+    "list_button@gd_menu_form.button": {
+        "size": ["100%",22],
+        "$button_asset_panel": "gd_list_mails.list_button_asset",
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$hover_border_color": [0.9803921568627451, 0.8392156862745098, 0.2901960784313726],
+        "$default_border_alpha": 0
+    },
+
+    "list_button_asset": {
+        "type": "panel",
+        "size": ["100%",18],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "controls": [
+            {
+                "background@gd_menu_form.button_image": {
+                }
+            },
+            {
+                "text": {
+                    "type": "label",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": ["98%", 16],
+                    "offset": [0,3],
+                    "layer": 2,
+                    "text": "#form_button_text",
+                    "text_alignment": "center",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",      
+                            "binding_type": "collection",                                      
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ]
+                }
+            },
+            {
+                "border@common_buttons.focus_border": {
+                  "size": ["100%", "100%"],
+                  "color": "$border_color",
+                  "layer": 3,
+                  "alpha": "$border_alpha"
+                }
+              }
+        ]
+    }
+}

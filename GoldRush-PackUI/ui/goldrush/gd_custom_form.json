@@ -1,0 +1,38 @@
+{
+    "namespace": "gd_custom_form",
+
+    "stack_panel": {
+        "type": "stack_panel",
+        "size": ["100%","100%"],
+        "orientation": "vertical",
+        "anchor_from": "center",
+        "anchor_to": "top_left",
+
+        "$label|default": "@server_form.custom_label",
+        "$toggle|default": "@server_form.custom_toggle",
+        "$slider|default": "@server_form.custom_slider",
+        "$step_slider|default": "@server_form.custom_step_slider",
+        "$dropdown|default": "@server_form.custom_dropdown",
+        "$input|default": "@server_form.custom_input",
+    
+        "factory":{
+          "name": "buttons",
+          "control_ids": {
+            "label": "$label",
+            "toggle": "$toggle",
+            "slider": "$slider",
+            "step_slider": "$step_slider",
+            "dropdown": "$dropdown",
+            "input": "$input"
+          }
+        },
+    
+        "collection_name": "custom_form",
+        "bindings": [
+          {
+            "binding_name": "#custom_form_length",
+            "binding_name_override": "#collection_length"
+          }
+        ]
+    }
+}

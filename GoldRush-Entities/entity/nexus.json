@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:nexus",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nexus"
+      },
+      "geometry": {
+        "default": "geometry.nexus"
+      },
+      "scripts": {
+        "animate": ["idle"]
+      },
+      "animations": {
+        "idle": "animation.nexus.idle"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

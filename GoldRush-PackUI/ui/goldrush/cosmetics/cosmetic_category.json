@@ -1,0 +1,203 @@
+{
+  "namespace": "cosmetic_category",
+
+
+  // INTERFACE UI
+  "main_panel@common_dialogs.main_panel_no_buttons": {
+    "controls": [
+      {
+        "background@api.base_image": {
+          "size": ["100%", "100%"],
+          "alpha": 0.8,
+          "$texture": "textures/goldrush/cosmetics/bg",
+          "controls": [
+            {"close@cosmetic_category.close_button":  {}},
+
+            {
+              "buttons@cosmetic_category.buttons_layers": {
+                "controls": [
+                  {"title@cosmetic_category.title": {}},
+                  {"hats_button@cosmetic_category.hat":  {}},
+                  {"back_button@cosmetic_category.back":  {}},
+                  {"capes_button@cosmetic_category.cape":  {}},
+                  {"costumes_button@cosmetic_category.costumes":  {}},
+                  {"others_button@cosmetic_category.others":  {}},
+                  {"pets_button@cosmetic_category.pets":  {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+
+  // BUTTONS STYLES
+  "hat@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48% - 2px"],
+    "offset": [0, 3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/button_hats",
+    "$hover_button_texture": "textures/ui/cosmetics/button_hats_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Hats')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+
+  "back@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48% - 2px"],
+    "offset": [0, 3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/button_capes",
+    "$hover_button_texture": "textures/ui/cosmetics/button_capes_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Bags')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+  "cape@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48% - 2px"],
+    "offset": [0, 3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/button_capes2",
+    "$hover_button_texture": "textures/ui/cosmetics/button_capes2_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Capes')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "top_right",
+    "anchor_from": "top_right"
+  },
+
+  "costumes@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48% - 2px"],
+    "offset": [0, -3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/button_costum",
+    "$hover_button_texture": "textures/ui/cosmetics/button_costum_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Costumes')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_left",
+    "anchor_from": "bottom_left"
+  },
+
+  "others@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48% - 2px"],
+    "offset": [0, -3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/other",
+    "$hover_button_texture": "textures/ui/cosmetics/other_hover",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Others')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle"
+  },
+
+
+  "pets@api.template_button_stack_panel": {
+    "$pressed_button_name": "button.form_button_click",
+    "size": ["33%", "48%  - 2px"],
+    "offset": [0, -3],
+    "$text_offset": [0, 0],
+    "$button_text": "",
+    "$button_text_binding_type": "collection",
+    "$button_state_panel|default": "common_buttons.new_ui_button_panel",
+    "$button_text_grid_collection_name": "form_buttons",
+    "$default_button_texture": "textures/ui/cosmetics/pets",
+    "$hover_button_texture": "textures/ui/cosmetics/pets",
+    "$pressed_button_texture": "$hover_button_texture",
+    "$locked_button_texture": "$hover_button_texture",
+    "$text_color": "white",
+    "$text_color_hover": "white",
+    "$shadow": true,
+    "$condition": "(#form_button_text = 'Pets')",
+    "alpha": 0.8,
+    "$font_scale_factor": 1.0,
+    "anchor_to": "bottom_right",
+    "anchor_from": "bottom_right"
+  },
+
+  // ASSETS UI
+
+
+  "title@api.base_image": {
+    "$texture": "textures/goldrush/cosmetics/title",
+    "size": [110, 30],
+    "anchor_to": "bottom_left",
+    "anchor_from": "top_left",
+    "offset": [3, -5]
+  },
+
+  "buttons_layers": {
+    "type": "panel",
+    "size": [400, 200],
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "offset": [0, 0]
+  },
+
+  "close_button@api.close_button":  {
+    "anchor_to": "top_right",
+    "anchor_from": "top_right",
+    "offset": [-3, 3],
+    "$default": "textures/ui/api/close_button",
+    "$hover": "textures/ui/api/close_button_hover"
+  }
+}

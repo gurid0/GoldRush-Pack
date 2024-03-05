@@ -1,0 +1,528 @@
+{
+  "namespace": "title",
+
+
+
+  "holder": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "announcement@announcement": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not(#text = 'cinematic') and not(('%.6s' * #text) = 'notif_') and not(('%.11s' * #text) = 'notif_email') and not(#text = 'break') and not(('%.11s' * #text) = 'notif_money') and not(('%.13s' * #text) = 'notif_custom_'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "break@break_title": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#text = 'break')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "cinematic@cinematic_bg": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#text = 'cinematic')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "notif@title.notif": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.11s' * #text) = 'notif_basic')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "notif_money@title.notif_money": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.11s' * #text) = 'notif_money')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "notif_email@title.notif_email": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.11s' * #text) = 'notif_email')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "mineur@title.notif_minor": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.12s' * #text) = 'notif_mineur')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "hunter@title.notif_hunter": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.12s' * #text) = 'notif_hunter')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "farmer@title.notif_farmer": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.12s' * #text) = 'notif_farmer')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "bucheron@title.notif_bucheron": {
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#text",
+              "binding_type": "global"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.14s' * #text) = 'notif_bucheron')",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "break_title": {},
+
+
+
+  "announcement": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      "-5%"
+    ],
+    "controls": [
+      {
+        "background": {
+          "texture": "textures/ui/bg/announcement",
+          "type": "image",
+          "size": "@title.bg_scale_in_announcement",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "alpha": "@title.bg_alpha_in",
+          "controls": [
+            {
+              "text": {
+                "text": "#text",
+                "color": [
+                  0.93725,
+                  0.89804,
+                  0.76471
+                ],
+                "font_type": "MinecraftTen",
+                "shadow": true,
+                "type": "label",
+                "offset": [
+                  0,
+                  -0.5
+                ],
+                "layer": 80,
+                "alpha": "@title.text_alpha_in",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ],
+                "controls": [
+                  {
+                    "text": {
+                      "text": "#text",
+                      "color": [
+                        0.93725,
+                        0.89804,
+                        0.76471
+                      ],
+                      "font_type": "normal",
+                      "shadow": true,
+                      "type": "label",
+                      "offset": [
+                        0,
+                        20
+                      ],
+                      "layer": 80,
+                      "alpha": "@title.text_alpha_in",
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_subtitle_text_string",
+                          "binding_name_override": "#text",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "cinematic_bg": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "layer": 200,
+    "controls": [
+      {
+        "bande1": {
+          "type": "image",
+          "texture": "textures/ui/bg_cinematic",
+          "size": ["100%", 32],
+          "alpha": 1.0,
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle"
+        }
+      },
+      {
+        "logo_goldrush": {
+          "type": "image",
+          "texture": "textures/hud/logo",
+          "size": [100, 50],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "alpha": 1.0,
+          "offset": [0, 10]
+        }
+      },
+      {
+        "bande2": {
+          "type": "image",
+          "texture": "textures/ui/bg_cinematic",
+          "size": ["100%", 32],
+          "alpha": 1.0,
+          "anchor_to": "bottom_middle",
+          "anchor_from": "bottom_middle"
+        }
+      }
+    ]
+  },
+
+
+
+
+  "notif": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [
+      -1, 20
+    ],
+    "$bg|default": "textures/ui/notif",
+    "$image_size|default": ["100%", "100%"],
+    "controls": [
+      {
+        "background": {
+          "texture": "textures/ui/bg_notif",
+          "type": "image",
+          "size": "@title.bg_scale_in_notif",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "alpha": 0.8,
+          "controls": [
+            {
+              "image_notif": {
+                "type": "image",
+                "alpha": "@title.alpha_out_notif_image",
+                "texture": "$bg",
+                "anchor_from": "middle_left",
+                "anchor_to": "middle_left",
+                "size": "$image_size",
+                "offset": [-68, 0],
+                "controls": [
+                  {
+                    "title": {
+                      "type": "label",
+                      "text": "Notification",
+                      "font_type": "normal",
+                      "alpha": "@title.alpha_out_notif_image",
+                      "shadow": true,
+                      "font_scale_factor": 1.2,
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "offset": [54, 2]
+                    }
+                  },
+                  {
+                    "desc": {
+                      "type": "label",
+                      "text": "#text",
+                      "font_type": "normal",
+                      "alpha": "@title.alpha_out_notif_image",
+                      "shadow": true,
+                      "font_scale_factor": 0.8,
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [137, 40],
+                      "offset": [90, 13],
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_subtitle_text_string",
+                          "binding_name_override": "#text",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "notif_email@title.notif": {
+    "$bg": "textures/ui/email"
+  },
+  "notif_money@title.notif": {
+    "$bg": "textures/ui/money"
+  },
+  "notif_minor@title.notif": {
+    "$bg": "textures/items/gold_pickaxe",
+    "$image_size": ["95%", "95%"]
+  },
+  "notif_farmer@title.notif": {
+    "$bg": "textures/items/berry_pink",
+    "$image_size": ["95%", "95%"]
+  },
+  "notif_hunter@title.notif": {
+    "$bg": "textures/items/gold_sword",
+    "$image_size": ["95%", "95%"]
+  },
+  "notif_bucheron@title.notif": {
+    "$bg": "textures/items/bone_axe_8",
+    "$image_size": ["85%", "85%"]
+  },
+
+
+
+
+  "bg_scale_in": {
+    "anim_type": "size",
+    "easing": "linear",
+    "from": [
+      "30%",
+      "100%c + 5px"
+    ],
+    "to": [
+      "80%",
+      "100%c + 5px"
+    ]
+  },
+  "bg_scale_in_announcement": {
+    "anim_type": "size",
+    "easing": "linear",
+    "duration": 1,
+    "from": [
+      "20%",
+      "100%c + 5px"
+    ],
+    "to": [
+      "40%",
+      "100%c + 5px"
+    ]
+  },
+
+
+  "bg_scale_in_notif": {
+    "anim_type": "size",
+    "easing": "linear",
+    "duration": 0.2,
+    "from": [
+      "10%",
+      "40px"
+    ],
+    "to": [
+      177,
+      "40px"
+    ],
+    "next": "@title.bg_alpha_wait_notif"
+  },
+
+  "bg_alpha_wait_notif": {
+    "anim_type": "wait",
+    "duration": 5,
+    "next": "@title.bg_scale_out_notif"
+  },
+
+  "bg_scale_out_notif": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 0.8,
+    "to": 0
+  },
+
+  "alpha_out_notif_image": {
+    "anim_type": "wait",
+    "duration": 5,
+    "next": "@title.bg_scale_out_notif"
+  },
+
+
+  "bg_alpha_in_cinematic": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 0,
+    "to": 1.0,
+    "next": "@title.bg_alpha_wait"
+  },
+  "bg_alpha_wait_cinematic": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@title.bg_alpha_out"
+  },
+  "bg_alpha_out_cinematic": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 1.0,
+    "to": 0,
+    "destroy_at_end": "background"
+  },
+
+
+
+  "bg_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 0,
+    "to": 0.7,
+    "next": "@title.bg_alpha_wait"
+  },
+  "bg_alpha_wait": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@title.bg_alpha_out"
+  },
+  "bg_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 0.7,
+    "to": 0,
+    "destroy_at_end": "background"
+  },
+  "text_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 0,
+    "to": 1,
+    "next": "@title.text_alpha_wait"
+  },
+  "text_alpha_wait": {
+    "anim_type": "wait",
+    "duration": 4,
+    "next": "@title.text_alpha_out"
+  },
+  "text_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": 1,
+    "from": 1,
+    "to": 0
+  }
+}

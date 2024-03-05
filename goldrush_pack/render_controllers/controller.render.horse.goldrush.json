@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.horse.goldrush": {
+      "part_visibility": [
+        { "Saddle": "query.is_saddled" },
+        { "Bit*": "query.is_saddled" },
+        { "Bridle": "query.is_saddled" },
+        { "Reins*" : "query.is_saddled && query.has_rider" },
+        { "Bag*" : false },
+        { "MuleEar*" : false}
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [ "Texture.default" ],
+      "color": {
+        "r": "variable.armor_texture_slot ? query.armor_color_slot(1, 0) : this",
+        "g": "variable.armor_texture_slot ? query.armor_color_slot(1, 1) : this",
+        "b": "variable.armor_texture_slot ? query.armor_color_slot(1, 2) : this",
+        "a": "variable.armor_texture_slot ? query.armor_color_slot(1, 3) : this"
+      }
+    }
+  }
+}

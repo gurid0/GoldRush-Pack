@@ -1,0 +1,250 @@
+{
+  "num_mip_levels": 4,
+  "padding": 8,
+  "resource_pack_name": "GoldRush Items/blocks",
+  "texture_data": {
+    "aluminium_block": {
+      "textures": "textures/blocks/aluminium_block"
+    },
+    "distillerie": {
+      "textures": "textures/blocks/distillerie"
+    },
+    "deepslate_amethyst_ore": {
+      "textures": "textures/blocks/deepslate_amethyst_ore"
+    },
+    "deepslate_gold_white_ore": {
+      "textures": "textures/blocks/deepslate_gold_white_ore"
+    },
+    "cobble_compressed": {
+      "textures": "textures/blocks/cobble_compressed"
+    },
+    "aluminium_ore": {
+      "textures": "textures/blocks/ores/aluminium_ore"
+    },
+    "amethyst_block": {
+      "textures": "textures/blocks/amethyst_block"
+    },
+    "easteregg": {
+      "textures": "textures/blocks/easter_egg"
+    },
+    "jump_block": {
+      "textures": "textures/blocks/stone"
+    },
+    "amethyst_ore": {
+      "textures": "textures/blocks/amethyst_ore"
+    },
+    "copper_block": {
+      "textures": "textures/blocks/copper_block"
+    },
+    "copper_ore": {
+      "textures": "textures/blocks/copper_ore"
+    },
+    "emerald_block": {
+      "textures": "textures/blocks/emerald_block"
+    },
+    "fossil_ore": {
+      "textures": "textures/blocks/fossil_ore"
+    },
+    "geode_ore": {
+      "textures": "textures/blocks/geode_ore"
+    },
+    "raisin_crops_stage_0": {
+      "textures": "textures/blocks/raisin_crops_stage_0"
+    },
+    "raisin_crops_stage_1": {
+      "textures": "textures/blocks/raisin_crops_stage_1"
+    },
+    "raisin_crops_stage_2": {
+      "textures": "textures/blocks/raisin_crops_stage_2"
+    },
+    "raisin_crops_stage_3": {
+      "textures": "textures/blocks/raisin_crops_stage_3"
+    },
+
+    "berry_blue_crops_stage_0": {
+      "textures": "textures/blocks/berry_blue_crops_stage_0"
+    },
+    "berry_blue_crops_stage_1": {
+      "textures": "textures/blocks/berry_blue_crops_stage_1"
+    },
+    "berry_blue_crops_stage_2": {
+      "textures": "textures/blocks/berry_blue_crops_stage_2"
+    },
+    "berry_blue_crops_stage_3": {
+      "textures": "textures/blocks/berry_blue_crops_stage_3"
+    },
+
+
+    "berry_black_crops_stage_0": {
+      "textures": "textures/blocks/berry_black_crops_stage_0"
+    },
+    "berry_black_crops_stage_1": {
+      "textures": "textures/blocks/berry_black_crops_stage_1"
+    },
+    "berry_black_crops_stage_2": {
+      "textures": "textures/blocks/berry_black_crops_stage_2"
+    },
+    "berry_black_crops_stage_3": {
+      "textures": "textures/blocks/berry_black_crops_stage_3"
+    },
+
+    "berry_pink_crops_stage_0": {
+      "textures": "textures/blocks/berry_pink_crops_stage_0"
+    },
+    "berry_pink_crops_stage_1": {
+      "textures": "textures/blocks/berry_pink_crops_stage_1"
+    },
+    "berry_pink_crops_stage_2": {
+      "textures": "textures/blocks/berry_pink_crops_stage_2"
+    },
+    "berry_pink_crops_stage_3": {
+      "textures": "textures/blocks/berry_pink_crops_stage_3"
+    },
+
+
+    "berry_yellow_crops_stage_0": {
+      "textures": "textures/blocks/berry_yellow_crops_stage_0"
+    },
+    "berry_yellow_crops_stage_1": {
+      "textures": "textures/blocks/berry_yellow_crops_stage_1"
+    },
+    "berry_yellow_crops_stage_2": {
+      "textures": "textures/blocks/berry_yellow_crops_stage_2"
+    },
+    "berry_yellow_crops_stage_3": {
+      "textures": "textures/blocks/berry_yellow_crops_stage_3"
+    },
+
+    "gold_block": {
+      "textures": "textures/blocks/gold_block"
+    },
+    "gold_ore": {
+      "textures": "textures/blocks/gold_ore"
+    },
+    "gold_white_ore": {
+      "textures": "textures/blocks/gold_white_ore"
+    },
+    "gold_ore_lit": {
+      "textures": "textures/blocks/gold_ore_lit"
+    },
+    "gold_white_block": {
+      "textures": "textures/blocks/gold_white_block"
+    },
+    "netherite_ore": {
+      "textures": "textures/blocks/netherite_ore"
+    },
+    "test": {
+      "textures": "textures/blocks/jade_block"
+    },
+    "obsidian": {
+      "textures": "textures/blocks/obsidian"
+    },
+    "obsidian_ore": {
+      "textures": "textures/blocks/obsidian_ore"
+    },
+    "platinum_block": {
+      "textures": "textures/blocks/platinum_block"
+    },
+    "platinum_ore": {
+      "textures": "textures/blocks/platinum_ore"
+    },
+    "deepslate_platinum_ore": {
+      "textures": "textures/blocks/deepslate_platinum_ore"
+    },
+    "quartz_ore": {
+      "textures": "textures/blocks/quartz_ore"
+    },
+    "deepslate_gold_ore": {
+      "textures": "textures/blocks/deepslate_gold_ore"
+    },
+    "deepslate_emerald_ore": {
+      "textures": "textures/blocks/deepslate_emerald_ore"
+    },
+    "xp_ore": {
+      "textures": "textures/blocks/xp_ore"
+    },
+    "luckyblock": {
+      "textures": "textures/blocks/lucky_block"
+    },
+    "christmas_lucky_block": {
+      "textures": "textures/blocks/lucky_block_noel"
+    },
+    "sulfur_ore": {
+      "textures": "textures/blocks/sulfur_ore"
+    },
+    "grape_0": {
+      "textures": "textures/blocks/grape_0"
+    },
+    "grape_1": {
+      "textures": "textures/blocks/grape_1"
+    },
+    "grape_2": {
+      "textures": "textures/blocks/grape_2"
+    },
+    "grape_3": {
+      "textures": "textures/blocks/grape_3"
+    },
+    "wheat_obsidian_stage_0": {
+      "textures": "textures/blocks/wheat_obsidian_stage_0"
+    },
+    "wheat_obsidian_stage_1": {
+      "textures": "textures/blocks/wheat_obsidian_stage_1"
+    },
+    "wheat_obsidian_stage_2": {
+      "textures": "textures/blocks/wheat_obsidian_stage_2"
+    },
+    "wheat_obsidian_stage_3": {
+      "textures": "textures/blocks/wheat_obsidian_stage_3"
+    },
+    "emerald_chest": {
+      "textures": "textures/blocks/emerald_chest"
+    },
+    "amethyst_chest": {
+      "textures": "textures/blocks/amethyst_chest"
+    },
+    "platinum_chest": {
+      "textures": "textures/blocks/platinum_chest"
+    },
+    "flower_percent": {
+      "textures": "textures/blocks/flower_percent"
+    },
+
+    "obsidian_platinum": {
+      "textures": "textures/blocks/obsidian_platinum"
+    },
+    "obsidian_amethyst": {
+      "textures": "textures/blocks/obsidian_amethyst"
+    },
+    "obsidian_emerald": {
+      "textures": "textures/blocks/obsidian_emerald"
+    },
+
+
+
+    "barrel_custom": {
+      "textures": "textures/blocks/barrel"
+    },
+    "emerald_ore_custom": {
+      "textures": "textures/blocks/emerald_ore"
+    },
+
+    "dirt_compressed": {
+      "textures": "textures/blocks/dirt_compressed"
+    },
+
+    "gold_ore_custom": {
+      "textures": "textures/blocks/gold_ore"
+    },
+
+    "barrel_bottom" : {
+      "textures" : [ "textures/blocks/barrel_bottom", "textures/blocks/barrel_bottom" ]
+    },
+    "barrel_side" : {
+      "textures" : [ "textures/blocks/barrel_side", "textures/blocks/barrel_side" ]
+    },
+    "barrel_top" : {
+      "textures" : [ "textures/blocks/barrel_top", "textures/blocks/barrel_top_open" ]
+    }
+  },
+  "texture_name": "atlas.terrain"
+}

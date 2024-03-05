@@ -1,0 +1,23 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+
+
+      "identifier": "goldrush:horse_gold",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/horse/horse_gold"
+      },
+      "geometry": {
+        "default": "geometry.horse"
+      },
+
+
+
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:boss_souls",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/boss_souls"
+      },
+      "particle_effects": {
+        "charged_flames": "goldrush:firefeu_custom"
+      },
+      "geometry": {
+        "default": "geometry.boss_souls"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

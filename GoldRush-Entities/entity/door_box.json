@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:door_box",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/door_box"
+      },
+      "geometry": {
+        "default": "geometry.door_box"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}

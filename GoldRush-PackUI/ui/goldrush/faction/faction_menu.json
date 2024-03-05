@@ -1,0 +1,312 @@
+{
+    "namespace": "faction_menu",
+
+    "faction_menu@common_dialogs.main_panel_no_buttons": {
+        "$show_close_button": true,
+        "$use_compact_close_button": false,
+        "type": "panel",
+        "size": [292.5,195],
+        "offset": [0,-10],
+        "controls": [
+            {
+                "background_cadre": {
+                    "type": "image",
+                    "size": ["100%","100%"],
+                    "texture": "textures/goldrush/main_cadre",
+                    "layer": 6
+                }
+            },
+            {
+                "exit_button@gd.exit_button":{
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [-1.5,6.5],
+                    "size": [26.65,26.65],
+                    "layer": 7
+                }
+            },
+            {
+                "main_content": {
+                    "type": "panel",
+                    "size": ["100%","100%"],
+                    "controls": [
+                        {
+                            "list_faction":{
+                                "type": "stack_panel",
+                                "orientation": "vertical",
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "offset": [18,38],
+                                "factory":{
+                                    "name": "buttons",
+                                    "control_name": "faction_menu.list_faction"
+                                },
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                    "binding_name": "(#form_button_length * 1) - 8",
+                                    "binding_name_override": "#collection_length"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "find_mail_faction": {
+                                "type": "stack_panel",
+                                "orientation": "vertical",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_left",
+                                "offset": [-17,38],
+                                "factory":{
+                                    "name": "buttons",
+                                    "control_name": "faction_menu.find_mail_button"
+                                },
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                    "binding_name": "(#form_button_length * 1) - 8",
+                                    "binding_name_override": "#collection_length"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "left_tab_content":{
+                                "type": "stack_panel",
+                                "offset": [-27,41],
+                                "size": [20.8,"100%"],
+                                "orientation": "vertical",
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "factory":{
+                                    "name": "buttons",
+                                    "control_name": "faction_menu.left_tab"
+                                },
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                    "binding_name": "#form_button_length",
+                                    "binding_name_override": "#collection_length"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "right_tab_content":{
+                                "type": "stack_panel",
+                                "offset": [27,41],
+                                "size": [20.8,"100%"],
+                                "orientation": "vertical",
+                                "anchor_from": "top_right",
+                                "anchor_to": "top_right",
+                                "factory":{
+                                    "name": "buttons",
+                                    "control_name": "faction_menu.right_tab"
+                                },
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                    "binding_name": "#form_button_length",
+                                    "binding_name_override": "#collection_length"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "bottom_tab_content": {
+                                "type": "stack_panel",
+                                "offset": [-32,188],
+                                "size": [20.8,"100%"],
+                                "orientation": "horizontal",
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "factory":{
+                                    "name": "buttons",
+                                    "control_name": "faction_menu.bottom_tab"
+                                },
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                    "binding_name": "#form_button_length",
+                                    "binding_name_override": "#collection_length"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "list_faction@gd_menu_form.button":{
+        "size": [111.1, 130.5],
+        "$button_asset_panel": "faction_menu.button_assets",
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_text",      
+              "binding_type": "collection",                                      
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",    
+              "source_property_name": "(#form_button_text = 'list_faction')",
+              "target_property_name": "#visible"
+            }
+          ]
+    },
+    "find_mail_button@gd_menu_form.button":{
+        "size": [145.6,65.25],
+        "$button_asset_panel": "faction_menu.button_assets",
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_text",      
+              "binding_type": "collection",                                      
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",    
+              "source_property_name": "(#form_button_text = 'find_faction' or #form_button_text = 'menu_mail')",
+              "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "left_tab@faction_menu.tab": {
+        "size": [20.8,41],
+        "$size": [20.8,20.8],
+        "$offset_size": [35,0],
+        "$condition": "(('%.3s' * #form_button_text) = 'lft')"
+    },
+    "right_tab@faction_menu.tab": {
+        "size": [20.8,41],
+        "$size": [20.8,20.8],
+        "$offset_size": [-35,0],
+        "$condition": "(('%.3s' * #form_button_text) = 'rht')"
+    },
+
+    "bottom_tab@faction_menu.tab": {
+        "size": [41,20.8],
+        "$size": [20.8,20.8],
+        "$offset_size": [2,-22],
+        "$condition": "(('%.3s' * #form_button_text) = 'bot')"
+    },
+
+    "tab@gd_menu_form.button": {
+        "$button_asset_panel": "faction_menu.button_assets",
+        "$hover_state_panel": "faction_menu.button_assets_on",
+        "$default_border_color": [0.15294117647058825, 0.15294117647058825, 0.21176470588235294],
+        "$hover_border_color": [0.9450980392156862, 0.8392156862745098, 0.2901960784313726],
+        "$condition|default": "true",
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_text",      
+              "binding_type": "collection",                                      
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",    
+              "source_property_name": "$condition",
+              "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "button_assets": {
+        "type": "panel",
+        "$size|default": ["100%", "100%"],
+        "size": "$size",
+        "$padding_size|default": [0,0],
+        "controls": [
+            {
+                "background@gd_menu_form.button_image": {
+                    "fill": true
+                }
+            },
+            {
+              "border@common_buttons.focus_border": {
+                "size": ["100%", "100%"],
+                "color": "$border_color",
+                "layer": 3,
+                "alpha": "$border_alpha"
+              }
+            }
+        ]
+    },
+
+    "button_assets_on": {
+        "type": "panel",
+        "$size|default": ["100%", "100%"],
+        "size": "$size",
+        "$offset_size|default": [2,20],
+        "controls": [
+            {
+                "background@gd_menu_form.button_image": {
+                    "fill": true
+                }
+            },
+            {
+              "border@common_buttons.focus_border": {
+                "size": ["100%", "100%"],
+                "color": "$border_color",
+                "layer": 3,
+                "alpha": "$border_alpha"
+              }
+            },
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/purpleBorder",
+                    "anchor_to": "bottom_middle",
+                    "anchor_from": "bottom_middle",
+                    "size": ["100%c + 8px", "100%c + 8px"],
+                    "offset": "$offset_size",
+                    "layer": 300,
+                    "controls": [
+                        {
+                            "hover_text": {
+                                "type": "label",
+                                "layer": 1,
+                                "text": "#text",
+                                "enable_profanity_filter": false,
+                                "bindings": [
+                                    {
+                                      "binding_type": "collection_details",
+                                      "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                      "binding_name": "#form_button_text",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#form_button_text - ('%.4s' * #form_button_text))",
+                                        "target_property_name": "#text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+
+}

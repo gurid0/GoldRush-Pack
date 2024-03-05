@@ -1,0 +1,150 @@
+{
+  "format_version": "1.19.0",
+  "render_controllers": {
+    "controller.render.spark.lightsaber.hilt": {
+      "arrays": {
+        "textures": {
+          "array.hilt_single": [
+            "texture.hilt_single_01",
+            "texture.hilt_single_02",
+            "texture.hilt_single_03",
+            "texture.hilt_single_04",
+            "texture.hilt_single_05",
+            "texture.hilt_single_06",
+            "texture.hilt_single_07",
+            "texture.hilt_single_08",
+            "texture.hilt_single_09",
+            "texture.hilt_single_10",
+            "texture.hilt_single_11",
+            "texture.hilt_single_12",
+            "texture.hilt_single_13",
+            "texture.hilt_single_14",
+            "texture.hilt_single_15"
+          ],
+          "array.hilt_double": [
+            "texture.hilt_double_01",
+            "texture.hilt_double_02",
+            "texture.hilt_double_03",
+            "texture.hilt_double_04",
+            "texture.hilt_double_05",
+            "texture.hilt_double_06",
+            "texture.hilt_double_07",
+            "texture.hilt_double_08",
+            "texture.hilt_double_09",
+            "texture.hilt_double_10",
+            "texture.hilt_double_11",
+            "texture.hilt_double_12",
+            "texture.hilt_double_13",
+            "texture.hilt_double_14",
+            "texture.hilt_double_15"
+          ]
+        }
+      },
+      "geometry": "(v.style ?? 'single') == 'double' ? geometry.hilt_double : geometry.hilt",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "q.property('spark:lightsaber_style') == 'double' ? array.hilt_double[v.hilt] : array.hilt_single[v.hilt]"
+      ],
+      "is_hurt_color": {
+        "a": 0,
+        "r": 0,
+        "b": 0,
+        "g": 0
+      }
+    },
+    "controller.render.spark.lightsaber.on_belt": {
+      "arrays": {
+        "textures": {
+          "array.hilt_single": [
+            "texture.hilt_single_01",
+            "texture.hilt_single_02",
+            "texture.hilt_single_03",
+            "texture.hilt_single_04",
+            "texture.hilt_single_05",
+            "texture.hilt_single_06",
+            "texture.hilt_single_07",
+            "texture.hilt_single_08",
+            "texture.hilt_single_09",
+            "texture.hilt_single_10",
+            "texture.hilt_single_11",
+            "texture.hilt_single_12",
+            "texture.hilt_single_13",
+            "texture.hilt_single_14",
+            "texture.hilt_single_15"
+          ],
+          "array.hilt_double": [
+            "texture.hilt_double_01",
+            "texture.hilt_double_02",
+            "texture.hilt_double_03",
+            "texture.hilt_double_04",
+            "texture.hilt_double_05",
+            "texture.hilt_double_06",
+            "texture.hilt_double_07",
+            "texture.hilt_double_08",
+            "texture.hilt_double_09",
+            "texture.hilt_double_10",
+            "texture.hilt_double_11",
+            "texture.hilt_double_12",
+            "texture.hilt_double_13",
+            "texture.hilt_double_14",
+            "texture.hilt_double_15"
+          ]
+        }
+      },
+      "geometry": "q.property('spark:lightsaber_style') == 'double' ? geometry.hilt_double : geometry.hilt",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "q.property('spark:lightsaber_style') == 'double' ? array.hilt_double[q.property('spark:lightsaber_hilt')] : array.hilt_single[q.property('spark:lightsaber_hilt')]"
+      ],
+      "is_hurt_color": {
+        "a": 0,
+        "r": 0,
+        "b": 0,
+        "g": 0
+      }
+    },
+    "controller.render.spark.lightsaber.blade": {
+      "arrays": {
+        "textures": {
+          "array.color": [
+            "texture.blade_01",
+            "texture.blade_02",
+            "texture.blade_03",
+            "texture.blade_04",
+            "texture.blade_05",
+            "texture.blade_06",
+            "texture.blade_07",
+            "texture.blade_08",
+            "texture.blade_09"
+          ]
+        }
+      },
+      "geometry": "(v.style ?? 'single') == 'dual' ? Geometry.blade_dual : ((v.style ?? 'single') == 'double' ? Geometry.blade_double : Geometry.blade_single)",
+      "materials": [
+        {
+          "*": "Material.blade"
+        },
+        {
+          "glow*": "Material.glow"
+        }
+      ],
+      "textures": [
+        "array.color[q.property('spark:lightsaber_color')]"
+      ],
+      "is_hurt_color": {
+        "a": 0,
+        "r": 0,
+        "b": 0,
+        "g": 0
+      }
+    }
+  }
+}

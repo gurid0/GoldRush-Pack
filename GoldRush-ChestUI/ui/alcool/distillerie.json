@@ -1,0 +1,352 @@
+{
+  "namespace": "distillerie",
+
+  "distillerie_grid": {
+    "type": "grid",
+    "size": [ 197, 114 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "grid_dimensions": [ 10,  3],
+    "collection_name": "container_items",
+    "$background_images": "distillerie.distillerie_cell_image",
+    "$offset_grid": [9, -8],
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 2 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [9, -14],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 16],
+                "offset": [9, -28],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 1 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [9, -5],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "overlay": {
+                "type": "image",
+                "texture": "textures/ui/alcool/alcool_overlay",
+                "size": [14, 14],
+                "offset": [9, -5],
+                "layer": 4
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 16],
+                "offset": [9, "-5px + 14px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 4, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [10, 0],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 34],
+                "offset": [10, "-5px + 21px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 5, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [13, -8],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 44],
+                "offset": [13, "-5px + 16px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 6, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [18, -16],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 56],
+                "offset": [18, "-16px + 22.5px"],
+                "layer": 4,
+                "controls": [
+                  {
+                    "empty_pipe": {
+                      "type": "image",
+                      "texture": "textures/ui/alcool/empty_pipe",
+                      "size": [62, 2],
+                      "offset": [-32, "0px + 27px"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 3, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [9, 8],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 16],
+                "offset": [9, "8px + 14px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 2, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [8, 0],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 27],
+                "offset": [8, "-5px + 25px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 1, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [5, -8],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 44],
+                "offset": [5, "-5px + 16px"],
+                "layer": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "grid_position": [ 0, 0 ],
+          "controls": [
+            {
+              "grid7@common.container_item": {
+                "offset": [0, -16],
+                "$item_collection_name": "container_items"
+              }
+            },
+            {
+              "empty_pipe": {
+                "type": "image",
+                "texture": "textures/ui/alcool/empty_pipe",
+                "size": [2, 56],
+                "offset": [0, "-16px + 22.5px"],
+                "layer": 4,
+                "controls": [
+                  {
+                    "empty_pipe": {
+                      "type": "image",
+                      "texture": "textures/ui/alcool/empty_pipe",
+                      "size": [64, 2],
+                      "offset": [32, "0px + 27px"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "distillerie_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 12 ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "controls": [
+      {
+        "close_button_holder": {
+          "type": "panel",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [80, -74],
+          "controls": [
+            {
+              "close@api.close_button": {
+                "$default|default": "textures/ui/alcool/close_button",
+                "$hover|default": "textures/ui/alcool/close_button_hover",
+                "$pressed|default": "textures/ui/alcool/close_button_hover"
+              }
+            }
+          ]
+        }
+      },
+      { "chest_label@chest.chest_label": {
+        "text": "",
+        "offset": [ -22, -62 ]
+      }
+      },
+      {
+        "grid@distillerie.distillerie_grid": {
+          "offset": [ 20, -5 ]
+        }
+      },
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/alcool/background",
+          "size": [ 320, 172 ],
+          "offset": [ 0, -20 ],
+          "alpha": 1.0
+        }
+      },
+      {
+        "title": {
+          "type": "image",
+          "texture": "textures/ui/alcool/title",
+          "size": [ 100, 60 ],
+          "offset": [ 0, -82 ]
+        }
+      }
+    ]
+  },
+
+  "distillerie_chest_panel": {
+    "type": "panel",
+    "offset": [0, 40],
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 14
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            { "common_panel@common.common_panel": {} },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+
+                  { "distillerie_chest_panel_top_half@distillerie.distillerie_chest_panel_top_half": {
+                    "offset": [0, -27]
+                  }},
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "distillerie_cell_image": {
+    "type": "image",
+    "texture": "textures/ui/alcool/cell",
+    "layer": 1
+  }
+}

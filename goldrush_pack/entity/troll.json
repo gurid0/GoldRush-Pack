@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "goldrush:troll",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/troll"
+      },
+      "geometry": {
+        "default": "geometry.troll"
+      },
+      "render_controllers": ["controller.render.dynamite"]
+    }
+  }
+}
